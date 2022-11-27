@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона</title>
+  <base href="https://htmlacademy-adaptive.github.io/397911-sedona-27/2/">
+</head>
+
+<body class="page__body">
+  <header class="main-header">
+    <a class="main-header__logo">
+      <img src="img/logo.svg" width="185" height="96" alt="Логотип Седоны.">
+    </a>
+    <button class="main-header__toggle" type="button">
+      <span class="visually-hidden">Открыть меню</span>
+    </button>
+    <nav class="main-header__nav main-nav">
+      <ul class="main-nav__list main-menu">
+        <li class="main-menu__item main-menu__item--current">
+          <a href="index.html">Главная</a>
+        </li>
+        <li class="main-menu__item">
+          <a href="catalog.html">Фото и видео</a>
+        </li>
+        <li class="main-menu__item">
+          <a href="form.html">Форма отзыва</a>
+        </li>
+        <li class="main-menu__item">
+          <a href="#">htmlacademy</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main-container">
+    <h1 class="visually-hidden">Город Седона</h1>
+    <div class="presentation__img">
+      <h2 class="visually-hidden">Презентация</h2>
+      <img class="content__welcome-title" src="img/welcome-text.svg" alt="Welcome to the gorgeous Sedona.">
+    </div>
+
+    <section class="advantages">
+      <div class="info">
+        <h2 class="info__title title">Cедона - небольшой городок в аризоне, заслуживающий большего!</h2>
+        <p class="info__description description">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+      </div>
+
+      <ul class="advantages__list">
+        <li class="advantages__item">
+          <div class="advantage info-tile info-tile--blue">
+            <h3 class="info-tile__title title title--white">Настоящий городок</h3>
+            <span class="advantage__numbers text text--white">— №1 —</span>
+            <p class="advantage__description text text--white">Седона - не аттракцион для туристов, там течёт своя жизнь
+            </p>
+          </div>
+          <img class="advantages__img" src="img/сity-photo.jpg" alt="Вид города.">
+
+          <ul class="advantages-profit__list">
+            <li class="advantages-profit__item info-tile">
+              <div class="info-tile__icon icon--home"></div>
+              <h3 class="info-tile__title title">Жильё</h3>
+              <p class="info-tile__text text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+            </li>
+            <li class="advantages-profit__item info-tile">
+              <div class="info-tile__icon icon--burger"></div>
+              <h3 class="info-tile__title title">Еда</h3>
+              <p class="info-tile__text text">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+            </li>
+            <li class="advantages-profit__item info-tile">
+              <div class="info-tile__icon icon--gift"></div>
+              <h3 class="info-tile__title title">Cувениры</h3>
+              <p class="info-tile__text text">Не только китайского, но и местного производства!</p>
+            </li>
+          </ul>
+        </li>
+
+        <li class="advantages__item">
+          <img class="advantages__img" src="img/bridge.jpg" alt="каньон">
+          <div class="advantage info-tile info-tile--blue">
+            <h3 class="info-tile__title title title--white">Там есть мост дьявола</h3>
+            <span class="advantage__numbers text text--white">— №2 —</span>
+            <p class="advantage__description text text--white">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+          </div>
+        </li>
+        <li class="advantages__item">
+          <div class="advantage info-tile info-tile--grey">
+            <h3 class="info-tile__title title">Небольшая площадь</h3>
+            <span class="advantage__numbers text">— №3 —</span>
+            <p class="advantage__description text">Все интересные места находятся очень близко</p>
+          </div>
+        </li>
+        <li class="advantages__item">
+          <div class="advantage info-tile info-tile--grey">
+            <h3 class="info-tile__title title">Красивая дорога</h3>
+            <span class="advantage__numbers text">— №4 —</span>
+            <p class="advantage__description text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          </div>
+        </li>
+        <li class="advantages__item">
+          <div class="advantage info-tile info-tile--grey">
+            <h3 class="info-tile__title title">Мало туристов</h3>
+            <span class="advantage__numbers text">— №5 —</span>
+            <p class="advantage__description text">Большинство едет в Гранд Каньон и толпится там</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="info">
+      <h2 class="info__title heading">Заинтересовались?</h2>
+      <p class="info__description text">Укажите предполагаемые даты поездки,и мы покажем вам лучшие предложения гостиниц
+        в Седоне</p>
+      <a class="info__button button" href="#">найти гостиницу</a>
+    </section>
+    <div class="map">
+      <img class="location__map" src="img/map.jpg" alt="карта Аризона с гостиницей">
+    </div>
+  </main>
+
+  <footer class="main-footer footer">
+    <p class="footer__hashtag heading">#visitSEDONA</p>
+
+    <ul class="footer__social-links social-list">
+      <li class="social-list__item social-item">
+        <a class="social-item__link social-item__link--vkontakte" href="https://vk.com/htmlacademy">
+          <span class="visually-hidden social-item__description">Вконтакте</span>
+        </a>
+      </li>
+      <li class="social-list__item social-item">
+        <a class="social-item__link social-item__link--telegram" href="https://t.me/htmlacademy">
+          <span class="visually-hidden social-list__description">Telegram</span>
+        </a>
+      </li>
+      <li class="social-list__item social-item">
+        <a class="social-item__link social-item__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+          <span class="visually-hidden social-item__description">YouTube</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="footer__copyright copyright">
+      <a href="#" class="copyright__text">Разработано</a>
+    </div>
+  </footer>
+</body>
+
+</html>
