@@ -1,0 +1,35 @@
+@use "../mixins/title.scss";
+@use "../mixins/text.scss";
+
+.info-tile {
+  &--blue {
+    background-color: #81b3d2;
+  }
+
+  &--grey {
+    background-color: #eeeeee;
+  }
+}
+
+.info-tile__title {
+  @include title.title();
+  text-align: center;
+
+  &--white {
+    color: #ffffff;
+  }
+
+  &--left {
+    text-align: left;
+  }
+}
+
+
+.info-tile__text {
+  @include text.text();
+  text-align: center;
+
+  &--left {
+    text-align: left;
+  }
+}

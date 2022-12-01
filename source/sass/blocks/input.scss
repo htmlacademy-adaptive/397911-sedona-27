@@ -1,0 +1,21 @@
+@use "../mixins/title.scss";
+
+.input {
+  display: block;
+  width: 100%;
+  padding: 16px 0 16px 16px;
+  background: #f2f2f2;
+  border: none;
+  max-width: 280px;
+
+  &--multiline {
+    width: 100%;
+    border: none;
+    height: 150px;
+    background: #f2f2f2;
+
+    @include title.title();
+    text-transform: none;
+    padding: 16px 0 16px 16px;
+  }
+}

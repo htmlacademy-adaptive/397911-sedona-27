@@ -1,0 +1,14 @@
+@use "../mixins/text.scss";
+@use "../mixins/title.scss";
+
+.modal__description {
+  @include text.text();
+}
+
+.modal__title {
+  @include title.title();
+}
+
+.modal__button {
+  border: none;
+}

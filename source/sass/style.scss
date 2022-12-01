@@ -1,1 +1,36 @@
 // Начните писать стили здесь
+@use "visually-hidden.scss";
+@use "fonts.scss";
+
+// Blocks
+@use "blocks/main-header.scss";
+@use "blocks/page.scss";
+@use "blocks/main-nav.scss";
+@use "blocks/main-menu.scss";
+@use "blocks/main-container.scss";
+@use "blocks/advantages.scss";
+@use "blocks/info.scss";
+@use "blocks/description.scss";
+@use "blocks/advantage.scss";
+@use "blocks/info-tile.scss";
+@use "blocks/advantages-profit.scss";
+@use "blocks/button.scss";
+@use "blocks/map.scss";
+@use "blocks/main-footer.scss";
+@use "blocks/footer.scss";
+@use "blocks/social-list.scss";
+@use "blocks/social-item.scss";
+@use "blocks/copyright.scss";
+@use "blocks/catalog.scss";
+@use "blocks/present.scss";
+@use "blocks/photos.scss";
+@use "blocks/photo-item.scss";
+@use "blocks/feedback.scss";
+@use "blocks/form.scss";
+@use "blocks/fieldset.scss";
+@use "blocks/field.scss";
+@use "blocks/input.scss";
+@use "blocks/backdrop.scss";
+@use "blocks/modal.scss";
+@use "blocks/button-send.scss"
+

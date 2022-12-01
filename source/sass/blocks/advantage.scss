@@ -1,0 +1,38 @@
+@use "../mixins/text.scss";
+
+.advantage {
+  &--type-1 {
+    padding: 54px 18px 40px 18px;
+  }
+
+  &--type-2 {
+    padding: 37px 18px;
+  }
+
+  &--type-3 {
+    padding: 24px 18px 26px 18px;
+  }
+
+  &--type-4 {
+    padding: 24px 18px 28px 18px;
+  }
+}
+
+.advantage__numbers {
+  @include text.text();
+  display: block;
+  text-align: center;
+
+  &--white {
+    color: #ffffff;
+  }
+}
+
+.advantage__description {
+  @include text.text();
+  text-align: center;
+
+  &--white {
+    color: #ffffff;
+  }
+}

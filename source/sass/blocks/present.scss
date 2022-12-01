@@ -1,0 +1,28 @@
+.present {
+  background: url("../img/background.jpg") center no-repeat;
+  background-size: cover;
+  background-color: #000000;
+  padding-top: 56px;
+  position: relative;
+  overflow: hidden;
+  margin-top: -56px;
+
+
+  &::after {
+    content: "";
+    background: url("../img/divider.svg") no-repeat;
+    display: block;
+    position: absolute;
+    width: 1200px;
+    height: 57px;
+    left: 50%;
+    bottom: 0;
+    margin: 0 -600px;
+  }
+}
+
+.present__logo {
+  margin: 0 auto;
+  display: block;
+  padding: 52px 0 67px 0;
+}

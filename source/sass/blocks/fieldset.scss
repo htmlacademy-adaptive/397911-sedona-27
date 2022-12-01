@@ -1,0 +1,17 @@
+@use "../mixins/title.scss";
+
+.fieldset {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 20px 64px 20px;
+  margin: 0;
+}
+
+.fieldset__title {
+  @include title.title();
+  text-align: center;
+}
+
+.fieldset__fields {
+  list-style: none;
+}

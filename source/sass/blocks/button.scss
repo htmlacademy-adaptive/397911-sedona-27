@@ -1,0 +1,15 @@
+@use "../mixins/heading.scss";
+
+.button {
+  @include heading.heading();
+  color: #ffffff;
+  background-color: #81b3d2;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  padding: 16px 20px;
+
+  &--small {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,5 @@
+@use "../mixins/text.scss";
+
+.copyright__text {
+  @include text.text();
+}
