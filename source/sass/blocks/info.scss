@@ -1,0 +1,41 @@
+@use "../mixins/title.scss";
+@use "../mixins/text.scss";
+@use "../mixins/heading.scss";
+
+.info {
+  padding: 32px 18px;
+  position: relative;
+
+  &--decorate-bottom {
+    overflow: hidden;
+  }
+
+  &--decorate-bottom::after {
+    content: "";
+    background: url(../img/divider-buttom.svg) no-repeat;
+    display: block;
+    position: absolute;
+    width: 768px;
+    height: 37px;
+    left: 50%;
+    bottom: -21px;
+    margin: 0 -384px;
+  }
+}
+
+
+.info__title {
+  @include title.title();
+  text-align: center;
+
+  &--big {
+    @include heading.heading();
+  }
+}
+
+.info__description {
+  @include text.text();
+  text-align: center;
+  margin-top: 35px;
+}
+

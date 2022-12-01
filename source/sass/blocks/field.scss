@@ -1,0 +1,21 @@
+@use "../mixins/text.scss";
+@use "../mixins/title.scss";
+
+.field {
+
+}
+
+.field__input {
+  @include title.title();
+  text-transform: none;
+}
+
+.field__label {
+  @include text.text();
+  color: #333333;
+
+  &--right {
+    @include title.title();
+    text-transform: none;
+  }
+}

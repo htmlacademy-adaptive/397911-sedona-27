@@ -1,0 +1,25 @@
+.main-header {
+  height: 56px;
+  display: flex;
+  z-index: 1;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.main-header__logo {
+
+
+}
+
+.main-header__nav {
+  // display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.main-header__toggle {
+  background: url("../img/hamburger.svg") center no-repeat;
+  border: none;
+}

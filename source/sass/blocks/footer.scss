@@ -1,0 +1,11 @@
+@use "../mixins/heading.scss";
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__hashtag {
+  @include heading.heading();
+}
