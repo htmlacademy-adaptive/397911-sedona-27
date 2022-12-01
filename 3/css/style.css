@@ -1,0 +1,479 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/ptsans.woff2") format("woff2"), url("../fonts/ptsans.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/ptsansbold.woff2") format("woff2"), url("../fonts/ptsansbold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+.main-header {
+  height: 56px;
+  display: flex;
+  z-index: 1;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.main-header__nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.main-header__toggle {
+  background: url("../img/hamburger.svg") center no-repeat;
+  border: none;
+}
+
+.page {
+  height: 100%;
+}
+
+.page__body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-menu {
+  list-style: none;
+  background-color: #81b3d2;
+  margin: 0;
+  padding: 0;
+}
+
+.main-menu__link {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.main-menu__item {
+  text-align: center;
+}
+
+.main-container__title {
+  margin: 0 auto;
+  display: block;
+}
+
+.main-container__img {
+  background: url("../img/background.jpg") center no-repeat;
+  background-size: cover;
+  background-color: #000000;
+  padding: 90px 19px 85px 19px;
+  position: relative;
+  overflow: hidden;
+}
+.main-container__img::after {
+  content: "";
+  background: url("../img/divider.svg") no-repeat;
+  display: block;
+  position: absolute;
+  width: 1200px;
+  height: 57px;
+  left: 50%;
+  bottom: 0;
+  margin: 0 -600px;
+}
+
+.advantages__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.advantages__img {
+  width: 100%;
+  height: auto;
+}
+
+.info {
+  padding: 32px 18px;
+  position: relative;
+}
+.info--decorate-bottom {
+  overflow: hidden;
+}
+.info--decorate-bottom::after {
+  content: "";
+  background: url(../img/divider-buttom.svg) no-repeat;
+  display: block;
+  position: absolute;
+  width: 768px;
+  height: 37px;
+  left: 50%;
+  bottom: -21px;
+  margin: 0 -384px;
+}
+
+.info__title {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+}
+.info__title--big {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.info__description {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 35px;
+}
+
+.advantage--type-1 {
+  padding: 54px 18px 40px 18px;
+}
+.advantage--type-2 {
+  padding: 37px 18px;
+}
+.advantage--type-3 {
+  padding: 24px 18px 26px 18px;
+}
+.advantage--type-4 {
+  padding: 24px 18px 28px 18px;
+}
+
+.advantage__numbers {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #000000;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+}
+.advantage__numbers--white {
+  color: #ffffff;
+}
+
+.advantage__description {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+}
+.advantage__description--white {
+  color: #ffffff;
+}
+
+.info-tile--blue {
+  background-color: #81b3d2;
+}
+.info-tile--grey {
+  background-color: #eeeeee;
+}
+
+.info-tile__title {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+}
+.info-tile__title--white {
+  color: #ffffff;
+}
+.info-tile__title--left {
+  text-align: left;
+}
+
+.info-tile__text {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+}
+.info-tile__text--left {
+  text-align: left;
+}
+
+.advantages-profit {
+  list-style: none;
+  margin: 0;
+  padding: 23px 18px 46px 18px;
+}
+
+.button {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  color: #000000;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #81b3d2;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  padding: 16px 20px;
+}
+.button--small {
+  font-size: 18px;
+}
+
+.main-footer {
+  padding: 29px 20px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__hashtag {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.copyright__text {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.catalog__photos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog__persuasions {
+  padding: 17px 20px 0 20px;
+}
+
+.present {
+  background: url("../img/background.jpg") center no-repeat;
+  background-size: cover;
+  background-color: #000000;
+  padding-top: 56px;
+  position: relative;
+  overflow: hidden;
+  margin-top: -56px;
+}
+.present::after {
+  content: "";
+  background: url("../img/divider.svg") no-repeat;
+  display: block;
+  position: absolute;
+  width: 1200px;
+  height: 57px;
+  left: 50%;
+  bottom: 0;
+  margin: 0 -600px;
+}
+
+.present__logo {
+  margin: 0 auto;
+  display: block;
+  padding: 52px 0 67px 0;
+}
+
+.photo-item {
+  padding: 24px 20px 25px 20px;
+}
+
+.photo-item__title,
+.photo-item__like {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #000000;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.photo-item__autor {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #000000;
+  text-transform: uppercase;
+  text-transform: none;
+}
+
+.form__submit {
+  border: none;
+  margin-top: 56px;
+  width: 280px;
+}
+
+.form__fieldset {
+  border: none;
+}
+
+.fieldset {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 20px 64px 20px;
+  margin: 0;
+}
+
+.fieldset__title {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.fieldset__fields {
+  list-style: none;
+}
+
+.field__input {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+  text-transform: uppercase;
+  text-transform: none;
+}
+
+.field__label {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #000000;
+  text-transform: uppercase;
+  color: #333333;
+}
+.field__label--right {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+  text-transform: uppercase;
+  text-transform: none;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  padding: 16px 0 16px 16px;
+  background: #f2f2f2;
+  border: none;
+  max-width: 280px;
+}
+.input--multiline {
+  width: 100%;
+  border: none;
+  height: 150px;
+  background: #f2f2f2;
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+  text-transform: uppercase;
+  text-transform: none;
+  padding: 16px 0 16px 16px;
+}
+
+.modal__description {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.modal__title {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.modal__button {
+  border: none;
+}
+
+.button-send {
+  padding: 56px 20px 46px 20px;
+}
+/*# sourceMappingURL=style.css.map */
