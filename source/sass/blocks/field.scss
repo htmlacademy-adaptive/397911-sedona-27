@@ -1,10 +1,6 @@
 @use "../mixins/text.scss";
 @use "../mixins/title.scss";
 
-.field {
-
-}
-
 .field__input {
   @include title.title();
   text-transform: none;

@@ -12,7 +12,7 @@
 
   &--decorate-bottom::after {
     content: "";
-    background: url(../img/divider-buttom.svg) no-repeat;
+    background: url("../img/divider-buttom.svg") no-repeat;
     display: block;
     position: absolute;
     width: 768px;
@@ -22,7 +22,6 @@
     margin: 0 -384px;
   }
 }
-
 
 .info__title {
   @include title.title();
@@ -38,4 +37,3 @@
   text-align: center;
   margin-top: 35px;
 }
-
