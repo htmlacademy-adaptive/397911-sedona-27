@@ -1,25 +1,30 @@
 @use "../mixins/title.scss";
 @use "../mixins/text.scss";
 @use "../mixins/heading.scss";
+@use "../variables.scss";
 
 .info {
   padding: 32px 18px;
   position: relative;
 
-  &--decorate-bottom {
-    overflow: hidden;
-  }
+  // &--decorate-bottom {
+  //   overflow: hidden;
+  // }
 
-  &--decorate-bottom::after {
-    content: "";
-    background: url("../img/divider-buttom.svg") no-repeat;
-    display: block;
-    position: absolute;
-    width: 768px;
-    height: 37px;
-    left: 50%;
-    bottom: -21px;
-    margin: 0 -384px;
+  @media (max-width: variables.$tablet-width) {
+    &--decorate-bottom::after {
+      content: "";
+      background: url(../img/divider-buttom.svg) top center no-repeat;
+      background-size: contain;
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 37px;
+      left: 50%;
+      bottom: -37px;
+      margin: 0 -50%;
+      z-index: 1;
+    }
   }
 }
 
@@ -36,4 +41,9 @@
   @include text.text();
   text-align: center;
   margin-top: 35px;
+}
+
+.info__button {
+  max-width: 458px;
+  margin: 0 auto;
 }

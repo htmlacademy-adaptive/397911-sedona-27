@@ -1,13 +1,26 @@
+@use "../variables.scss";
+
 .main-header {
   height: 56px;
   display: flex;
+  justify-content: flex-end;
   z-index: 1;
   position: relative;
   background-color: #ffffff;
+
+
+  @media (min-width: variables.$desktop-width) {
+    max-width: 1200px;
+  }
+}
+
+.main-header__logo {
+  position: absolute;
+  left: 50%;
+  margin-left: -92.5px;
 }
 
 .main-header__nav {
-  // display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -17,4 +30,15 @@
 .main-header__toggle {
   background: url("../img/hamburger.svg") center no-repeat;
   border: none;
+  width: 23px;
+  height: 22px;
+  padding: 0;
+  top: 17px;
+  right: 20px;
+  position: absolute;
+  cursor: pointer;
+
+  @media (min-width: variables.$tablet-width) {
+    display: none;
+  }
 }

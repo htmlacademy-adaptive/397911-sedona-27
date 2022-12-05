@@ -1,5 +1,6 @@
 @use "../mixins/title.scss";
 @use "../mixins/text.scss";
+@use "../variables.scss";
 
 .info-tile {
   &--blue {
@@ -8,6 +9,13 @@
 
   &--grey {
     background-color: #eeeeee;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    min-height: 331px;
+    width: 33.3%;
+    flex-shrink: 0;
+    box-sizing: border-box;
   }
 }
 

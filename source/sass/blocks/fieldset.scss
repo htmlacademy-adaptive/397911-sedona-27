@@ -1,10 +1,12 @@
 @use "../mixins/title.scss";
+@use "../variables.scss";
 
 .fieldset {
   display: flex;
   flex-direction: column;
   padding: 24px 20px 64px 20px;
   margin: 0;
+  box-sizing: border-box;
 }
 
 .fieldset__title {
@@ -14,4 +16,9 @@
 
 .fieldset__fields {
   list-style: none;
+
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+  }
 }
