@@ -1,5 +1,23 @@
+@use "../variables.scss";
+
 .advantages-profit {
   list-style: none;
   margin: 0;
-  padding: 23px 18px 46px 18px;
+  padding: 0;
+
+  @media (max-width: variables.$tablet-width) {
+    padding: 23px 18px 46px 18px;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    width: 100%;
+  }
+}
+
+.advantages-profit__item {
+  @media (min-width: variables.$tablet-width) {
+    width: 33.3%;
+    height: 331px;
+  }
 }

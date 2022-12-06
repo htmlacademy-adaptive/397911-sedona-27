@@ -1,13 +1,27 @@
-.catalog {
+@use "../variables.scss";
 
+.catalog__idea {
+  @media (min-width: variables.$tablet-width) and (max-width: variables.$desktop-width) {
+    padding: 0 60px;
+  }
 }
 
 .catalog__photos {
+
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: variables.$tablet-width) and (max-width: variables.$desktop-width) {
+    padding: 0 60px;
+  }
 }
 
 .catalog__persuasions {
   padding: 17px 20px 0 20px;
+
+
+  @media (min-width: variables.$tablet-width) and (max-width: variables.$desktop-width) {
+    padding: 0 60px;
+  }
 }

@@ -1,18 +1,79 @@
+@use "sass:math";
 @use "../mixins/title.scss";
+@use "../variables.scss";
 
 .main-menu {
   list-style: none;
-  background-color: #81b3d2;
   margin: 0;
   padding: 0;
+  width: 100%;
+
+  @media (max-width: variables.$tablet-width) {
+    background-color: #81b3d2;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
 }
+
 
 .main-menu__link {
   @include title.title();
-  color: #ffffff;
   text-decoration: none;
+  display: block;
+
+  @media (max-width: variables.$tablet-width) {
+    color: #ffffff;
+    padding: 17px 17px 12px;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 14px;
+    line-height: 21px;
+    padding-top: 18px;
+    padding-bottom: 17px;
+  }
 }
 
 .main-menu__item {
   text-align: center;
+
+  @media (max-width: variables.$tablet-width) {
+
+    width: 100%;
+    box-sizing: border-box;
+
+    border-bottom: 1px solid rgba(1, 1, 1, 0.2);
+    position: relative;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    &:not(:last-child) {
+      box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
+
+    &:last-of-type::after {
+      content: "";
+      width: 100%;
+      min-height: 7px;
+      border-bottom: none;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    &:nth-child(4n + 2) {
+      margin-right: variables.$logo-width;
+    }
+
+    width: calc(25% - math.div(variables.$logo-width, 4));
+  }
 }

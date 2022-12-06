@@ -1,0 +1,29 @@
+@use "../variables.scss";
+
+.photos {
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.photos__item {
+
+  text-align: center;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 50%;
+
+    &:first-child {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 33.33%;
+
+    &:first-child {
+      width: 100%;
+    }
+  }
+}

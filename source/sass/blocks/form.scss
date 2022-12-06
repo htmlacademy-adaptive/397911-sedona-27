@@ -1,3 +1,22 @@
+@use "../variables.scss";
+
+.form {
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      width: 50%;
+    }
+
+    &:nth-child(n+2) {
+      width: 100%;
+    }
+  }
+}
+
+
 .form__submit {
   border: none;
   margin-top: 56px;
@@ -6,4 +25,15 @@
 
 .form__fieldset {
   border: none;
+
+  @media (min-width: variables.$tablet-width) {
+    &:nth-child(1),
+    &:nth-child(2) {
+      width: 50%;
+    }
+
+    &:nth-child(n+3) {
+      width: 100%;
+    }
+  }
 }
