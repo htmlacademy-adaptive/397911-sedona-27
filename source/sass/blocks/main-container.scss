@@ -1,11 +1,19 @@
+@use "../variables.scss";
+
 .main-container__title {
   margin: 0 auto;
   display: block;
   max-width: 100%;
+  width: 461px;
+  height: 350px;
+
+  @media (max-width: variables.$tablet-width) {
+    max-height: 214px;
+  }
 }
 
 .main-container__img {
-  background: url("../img/background.jpg") center no-repeat;
+  background: url("../img/background-mobile.jpg") center no-repeat;
   background-size: cover;
   background-color: #000000;
   padding: 90px 19px 85px 19px;
@@ -22,5 +30,10 @@
     left: 50%;
     bottom: 0;
     margin: 0 -600px;
+  }
+
+
+  @media (min-width: variables.$tablet-width) {
+    background: url("../img/background.jpg") center no-repeat;
   }
 }
