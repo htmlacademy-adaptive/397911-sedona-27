@@ -14,6 +14,11 @@
       <img src="img/logo.svg" width="185" height="96" alt="Логотип Седоны.">
     </a>
     <button class="main-header__toggle" type="button">
+      <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22.9 0H0V4H22.9V0Z" fill="#81B3D2"/>
+        <path d="M22.9 9H0V13H22.9V9Z" fill="#81B3D2"/>
+        <path d="M22.9 18H0V22H22.9V18Z" fill="#81B3D2"/>
+        </svg>
       <span class="visually-hidden">Открыть меню</span>
     </button>
     <nav class="main-header__nav main-nav">
@@ -76,22 +81,25 @@
         <ul class="fieldset__fields">
           <li class="fieldset__field">
             <label class="field">
-              <input class="field__input radio" type="radio" name="emotional-experience" value="optimistic"
+              <input class="field__input  visually-hidden" type="radio" name="emotional-experience" value="optimistic"
                 checked>
+                <span class="radio"></span>
               <span class="field__label field__label--right">Скорее положительное</span>
             </label>
           </li>
           <li class="fieldset__field">
             <label class="field">
-              <input class="field__input radio" type="radio" name="emotional-experience"
+              <input class="field__input  visually-hidden" type="radio" name="emotional-experience"
                 value="pessimistic">
+                <span class="radio"></span>
               <span class="field__label field__label--right">Скорее отрицательно</span>
             </label>
           </li>
           <li class="fieldset__field">
             <label class="field">
-              <input class="field__input radio" type="radio" name="emotional-experience"
+              <input class="field__input  visually-hidden" type="radio" name="emotional-experience"
                 value="complicate">
+                <span class="radio"></span>
               <span class="field__label field__label--right">Затрудняюсь ответить</span>
             </label>
           </li>
@@ -102,25 +110,29 @@
         <ul class="fieldset__fields">
           <li class="fieldset__field">
             <label class="field">
-              <input class="field__input checkbox" type="checkbox" name="Devil bridge" checked>
+              <input class="field__input  visually-hidden" type="checkbox" name="Devil bridge" checked>
+              <span class="checkbox"></span>
               <span class="field__label field__label--right">Мост Дьявола</span>
             </label>
           </li>
           <li class="fieldset__field">
             <label class="field">
-              <input class="field__input checkbox" type="checkbox" name="Hill Bell" checked>
+              <input class="field__input  visually-hidden" type="checkbox" name="Hill Bell" checked>
+              <span class="checkbox"></span>
               <span class="field__label field__label--right">Гора-Колокол</span>
             </label>
           </li>
           <li class="fieldset__field">
             <label class="field">
-              <input class="field__input checkbox" type="checkbox" name="Slide parkc" checked>
+              <input class="field__input  visually-hidden" type="checkbox" name="Slide parkc" checked>
+              <span class="checkbox"></span>
               <span class="field__label field__label--right">Слайд-парк</span>
             </label>
           </li>
           <li class="fieldset__field">
             <label class="field">
-              <input class="field__input checkbox" type="checkbox" name="Red rock">
+              <input class="field__input  visually-hidden" type="checkbox" name="Red rock">
+              <span class="checkbox"></span>
               <span class="field__label field__label--right">Красные скалы</span>
             </label>
           </li>

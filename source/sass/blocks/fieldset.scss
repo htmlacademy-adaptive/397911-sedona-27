@@ -16,9 +16,16 @@
 
 .fieldset__fields {
   list-style: none;
+  margin: 0;
+  padding: 0;
 
 
   @media (min-width: variables.$tablet-width) {
     display: flex;
   }
+}
+
+.fieldset__field {
+  margin-bottom: 16px;
+  flex-direction: column;
 }

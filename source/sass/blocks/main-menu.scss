@@ -39,10 +39,14 @@
 
     width: 100%;
     box-sizing: border-box;
-    box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
     border-bottom: 1px solid rgba(1, 1, 1, 0.2);
     padding: 17px;
     position: relative;
+
+    &:not(:last-child) {
+      box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
 
     &:last-of-type::after {
       content: "";
@@ -54,5 +58,13 @@
       left: 0;
       bottom: 0;
     }
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    &:nth-child(4n + 2) {
+      padding-right: 20px;
+    }
+    padding-top: 18px;
+    padding-bottom: 17px;
   }
 }
