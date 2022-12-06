@@ -1,3 +1,5 @@
+@use "../variables.scss";
+
 .present {
   background: url("../img/background.jpg") center no-repeat;
   background-size: cover;
@@ -25,4 +27,9 @@
   margin: 0 auto;
   display: block;
   padding: 52px 0 67px 0;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 457px;
+    height: 78px;
+  }
 }

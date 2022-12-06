@@ -1,21 +1,15 @@
 @use "../variables.scss";
 
-.main-nav {
-  display: none;
-
-  @media (min-width: variables.$tablet-width) {
-    display: block;
-  }
-}
 
 .main-nav__close {
   height: 55px;
-  width: 55px;
+  width: 61px;
   background: url("../../img/nav-closed.svg") center no-repeat;
   position: absolute;
   top: 0;
   right: 0;
   border: none;
+  z-index: 1;
 
   @media (min-width: variables.$tablet-width) {
     display: none;

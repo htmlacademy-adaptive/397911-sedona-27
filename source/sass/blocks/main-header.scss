@@ -1,3 +1,4 @@
+@use "sass:math";
 @use "../variables.scss";
 
 .main-header {
@@ -8,6 +9,11 @@
   position: relative;
   background-color: #ffffff;
 
+  @media (max-width: variables.$tablet-width) {
+    &--js-disabled {
+      height: auto;
+    }
+  }
 
   @media (min-width: variables.$desktop-width) {
     max-width: 1200px;
@@ -17,7 +23,7 @@
 .main-header__logo {
   position: absolute;
   left: 50%;
-  margin-left: -92.5px;
+  margin-left: -1 * math.div(variables.$logo-width, 2);
 }
 
 .main-header__nav {
@@ -25,6 +31,23 @@
   top: 0;
   left: 0;
   width: 100%;
+  display: none;
+
+  &--opened {
+    display: block;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    display: block;
+  }
+}
+
+@media (max-width: variables.$tablet-width) {
+  .main-header--js-disabled .main-header__nav {
+    position: static;
+    margin-top: 56px;
+    display: block;
+  }
 }
 
 .main-header__toggle {
@@ -49,4 +72,8 @@
   @media (min-width: variables.$tablet-width) {
     display: none;
   }
+}
+
+.main-header--js-disabled .main-header__toggle {
+  display: none;
 }

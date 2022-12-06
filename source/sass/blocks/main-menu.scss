@@ -1,3 +1,4 @@
+@use "sass:math";
 @use "../mixins/title.scss";
 @use "../variables.scss";
 
@@ -13,7 +14,8 @@
 
   @media (min-width: variables.$tablet-width) {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
 }
 
@@ -21,14 +23,18 @@
 .main-menu__link {
   @include title.title();
   text-decoration: none;
+  display: block;
 
   @media (max-width: variables.$tablet-width) {
     color: #ffffff;
+    padding: 17px 17px 12px;
   }
 
   @media (min-width: variables.$tablet-width) {
     font-size: 14px;
     line-height: 21px;
+    padding-top: 18px;
+    padding-bottom: 17px;
   }
 }
 
@@ -41,8 +47,11 @@
     box-sizing: border-box;
 
     border-bottom: 1px solid rgba(1, 1, 1, 0.2);
-    padding: 17px;
     position: relative;
+
+    &:last-child {
+      border-bottom: 0;
+    }
 
     &:not(:last-child) {
       box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
@@ -62,9 +71,9 @@
 
   @media (min-width: variables.$tablet-width) {
     &:nth-child(4n + 2) {
-      padding-right: 20px;
+      margin-right: variables.$logo-width;
     }
-    padding-top: 18px;
-    padding-bottom: 17px;
+
+    width: calc(25% - math.div(variables.$logo-width, 4));
   }
 }

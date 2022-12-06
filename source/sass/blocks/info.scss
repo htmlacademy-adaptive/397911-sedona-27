@@ -14,7 +14,7 @@
   @media (max-width: variables.$tablet-width) {
     &--decorate-bottom::after {
       content: "";
-      background: url(../img/divider-buttom.svg) top center no-repeat;
+      background: url("../img/divider-buttom.svg") top center no-repeat;
       background-size: contain;
       display: block;
       position: absolute;
