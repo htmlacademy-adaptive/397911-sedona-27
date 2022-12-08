@@ -1,3 +1,17 @@
+@use "../mixins/media.scss";
+
 .main-footer {
-  padding: 29px 20px;
+  padding: 29px 23px;
+
+  @include media.for-mobile {
+    padding-top: 10px;
+  }
+
+  @include media.for-tablet {
+    padding-top: 20px;
+  }
+
+  @include media.for-desktop {
+    padding-top: 30px;
+  }
 }

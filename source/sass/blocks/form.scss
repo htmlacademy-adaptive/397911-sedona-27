@@ -1,4 +1,6 @@
 @use "../variables.scss";
+@use "../mixins/media.scss";
+@use "../mixins/text.scss";
 
 .form {
   @media (min-width: variables.$tablet-width) {
@@ -19,12 +21,15 @@
 
 .form__submit {
   border: none;
-  margin-top: 56px;
   width: 280px;
 }
 
 .form__fieldset {
   border: none;
+
+  @include media.for-mobile {
+    border-top: 1px solid #e5e5e5;
+  }
 
   @media (min-width: variables.$tablet-width) {
     &:nth-child(1),
@@ -32,8 +37,23 @@
       width: 50%;
     }
 
+    &:nth-child(1) {
+      border-right: 1px solid #dbdbdb;
+    }
+
     &:nth-child(n+3) {
       width: 100%;
     }
+  }
+}
+
+.form__note {
+  @include text.text();
+  font-size: 12px;
+  margin: 3px 0 0 0;
+
+  @media (min-width: variables.$tablet-width) {
+    @include text.text();
+    margin: auto;
   }
 }

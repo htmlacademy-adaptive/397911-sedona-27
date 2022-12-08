@@ -2,7 +2,11 @@
 
 .catalog__idea {
   @media (min-width: variables.$tablet-width) and (max-width: variables.$desktop-width) {
-    padding: 0 60px;
+    padding: 66px 60px 67px 60px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 100px 60px 65px 60px;
   }
 }
 

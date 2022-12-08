@@ -24,12 +24,14 @@
     </button>
     <nav class="main-header__nav main-nav">
       <button class="main-nav__close" type="button">
+
+<svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23 2.77 20.1 0l-8.6 8.23L2.9 0 0 2.77 8.6 11 0 19.23 2.9 22l8.6-8.23L20.1 22l2.9-2.77L14.4 11 23 2.77Z" fill="#fff"/></svg>
         <span class="visually-hidden">Закрыть меню</span>
       </button>
 
       <ul class="main-nav__list main-menu">
-        <li class="main-menu__item main-menu__item--current">
-          <a class="main-menu__link" href="index.html">Главная</a>
+        <li class="main-menu__item ">
+          <a class="main-menu__link main-menu__link--current" href="index.html">Главная</a>
         </li>
         <li class="main-menu__item">
           <a class="main-menu__link" href="catalog.html">Фото и видео</a>
@@ -52,8 +54,8 @@
 
     <section class="advantages">
       <div class="info info--decorate-bottom">
-        <h2 class="info__title">Cедона - небольшой <br>городок в аризоне, <br>заслуживающий большего!</h2>
-        <p class="info__description">Рассмотрим 5 причин, по которым <br>Седона круче, чем гранд каньон!</p>
+        <h2 class="info__title">Cедона - небольшой<br> городок в аризоне,<br> заслуживающий большего!</h2>
+        <p class="info__description">Рассмотрим 5 причин, по которым<br> Седона круче, чем гранд каньон!</p>
       </div>
 
       <ul class="advantages__list">
@@ -62,59 +64,70 @@
           <div class="advantage advantage--type-1 info-tile info-tile--blue">
             <h3 class="info-tile__title info-tile__title--white">Настоящий городок</h3>
             <span class="advantage__numbers advantage__numbers--white">— №1 —</span>
-            <p class="advantage__description advantage__description--white">Седона - не аттракцион для туристов, там течёт своя жизнь
+            <p class="advantage__description advantage__description--white">Седона - не аттракцион для туристов,<br> там течёт своя жизнь
             </p>
           </div>
-          <img class="advantages__img" src="img/city-photo.jpg" alt="Вид города.">
+          <picture style="width: 100%;">
+            <source media="(min-width: 1200px)" srcset="img/photo-city@1x-desktop.jpg">
+            <source media="(min-width: 768px)" srcset="img/photo-city@1x-tablet.jpg">
+            <img class="advantages__img" src="img/photo-city@1x-mobile.jpg" alt="Вид города." >
+          </picture>
+          <!-- <img class="advantages__img" src="img/city-photo.jpg" alt="Вид города."> -->
           </div>
           <ul class="advantages-profit">
             <li class="advantages-profit__item info-tile">
               <div class="info-tile__icon info-tile__icon--home"></div>
               <h3 class="info-tile__title info-tile__title--left">Жильё</h3>
-              <p class="info-tile__text info-tile__text--left">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+              <p class="info-tile__text info-tile__text--left">Рекомендуем пожить в<br> настоящем мотеле, всё как в<br> кино!</p>
             </li>
             <li class="advantages-profit__item info-tile">
               <div class="info-tile__icon info-tile__icon--burger"></div>
               <h3 class="info-tile__title info-tile__title--left">Еда</h3>
-              <p class="info-tile__text info-tile__text--left">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+              <p class="info-tile__text info-tile__text--left">Всегда заказывайте топовый фирменный<br> бургер, вы не разочаруетесь!</p>
             </li>
             <li class="advantages-profit__item info-tile">
               <div class="info-tile__icon info-tile__icon--gift"></div>
               <h3 class="info-tile__title info-tile__title--left">Cувениры</h3>
-              <p class="info-tile__text info-tile__text--left">Не только китайского, но и местного производства!</p>
+              <p class="info-tile__text info-tile__text--left">Не только китайского, но и<br> местного производства!</p>
             </li>
           </ul>
         </li>
 
         <li class="advantages__item">
           <div class="advantages__group">
-          <img class="advantages__img" src="img/bridge.jpg"  alt="каньон">
-          <div class="advantage advantage--type-2 info-tile info-tile--blue">
-            <h3 class="info-tile__title info-tile__title--white">Там есть мост дьявола</h3>
-            <span class="advantage__numbers advantage__numbers--white">— №2 —</span>
-            <p class="advantage__description advantage__description--white">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
-          </div>
+
+            <div class="advantage advantage--type-2 info-tile info-tile--blue">
+              <h3 class="info-tile__title info-tile__title--white">Там есть мост дьявола</h3>
+              <span class="advantage__numbers advantage__numbers--white">— №2 —</span>
+              <p class="advantage__description advantage__description--white">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+            </div>
+            <picture style="width: 100%;">
+              <source media="(min-width: 1200px)" srcset="img/photo-bridge@1x-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo-bridge@1x-tablet.jpg">
+              <img class="advantages__img" src="img/photo-bridge@1x-mobile.jpg" alt="Вид города." >
+            </picture>
+          <!-- <img class="advantages__img" src="img/bridge.jpg"  alt="каньон"> -->
         </div>
         </li>
         <li class="advantages__item advantage  advantage--type-3 info-tile info-tile--grey">
 
             <h3 class="info-tile__title">Небольшая площадь</h3>
             <span class="advantage__numbers">— №3 —</span>
-            <p class="advantage__description">Все интересные места находятся очень близко</p>
+            <p class="advantage__description">Все интересные места находятся<br> очень близко</p>
 
         </li>
         <li class="advantages__item advantage advantage--type-3 info-tile info-tile--grey">
 
             <h3 class="info-tile__title">Красивая дорога</h3>
             <span class="advantage__numbers">— №4 —</span>
-            <p class="advantage__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            <p class="advantage__description">Ехать в Седону из Лас-Вегаса<br> совсем не скучно!</p>
 
         </li>
         <li class="advantages__item advantage advantage--type-4 info-tile info-tile--grey">
 
             <h3 class="info-tile__title">Мало туристов</h3>
             <span class="advantage__numbers">— №5 —</span>
-            <p class="advantage__description">Большинство едет в Гранд Каньон и толпится там</p>
+            <p class="advantage__description">Большинство едет в Гранд Каньон<br> и толпится там</p>
 
         </li>
       </ul>

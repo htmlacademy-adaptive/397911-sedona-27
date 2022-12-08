@@ -7,8 +7,12 @@
 
 .modal__title {
   @include title.title();
-}
 
-.modal__button {
-  border: none;
+  // @media (min-width: variables.$tablet-width) {
+  //   @include title.title-big();
+  // }
+
+  .modal__button {
+    border: none;
+  }
 }

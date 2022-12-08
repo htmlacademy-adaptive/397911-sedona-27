@@ -1,7 +1,7 @@
 @use "../variables.scss";
 
 .present {
-  background: url("../img/background.jpg") center no-repeat;
+  background: url("../img/back-desktop.jpg") center no-repeat;
   background-size: cover;
   background-color: #000000;
   padding-top: 56px;
@@ -9,6 +9,12 @@
   overflow: hidden;
   margin-top: -56px;
 
+
+  @media (min-width: variables.$tablet-width) {
+    background: url("../img/background.jpg") center no-repeat;
+    background-size: auto;
+    background-position: center bottom;
+  }
 
   &::after {
     content: "";
@@ -31,5 +37,6 @@
   @media (min-width: variables.$tablet-width) {
     width: 457px;
     height: 78px;
+    padding: 95px 0 117px 0;
   }
 }

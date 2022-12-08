@@ -24,18 +24,20 @@
       </button>
       <nav class="main-header__nav main-nav">
         <button class="main-nav__close" type="button">
+          <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23 2.77 20.1 0l-8.6 8.23L2.9 0 0 2.77 8.6 11 0 19.23 2.9 22l8.6-8.23L20.1 22l2.9-2.77L14.4 11 23 2.77Z" fill="#fff"/></svg>
+
           <span class="visually-hidden">Закрыть меню</span>
         </button>
 
         <ul class="main-nav__list main-menu">
-          <li class="main-menu__item main-menu__item--current">
+          <li class="main-menu__item">
             <a class="main-menu__link" href="index.html">Главная</a>
           </li>
           <li class="main-menu__item">
             <a class="main-menu__link" href="catalog.html">Фото и видео</a>
           </li>
           <li class="main-menu__item">
-            <a class="main-menu__link" href="form.html">Форма отзыва</a>
+            <a class="main-menu__link main-menu__link--current" href="form.html">Форма отзыва</a>
           </li>
           <li class="main-menu__item">
             <a class="main-menu__link" href="https://www.htmlacademy.ru/">htmlacademy</a>
@@ -53,14 +55,14 @@
     </div>
 
     <div class="feedback__idea info">
-      <h2 class="info__title">Оставьте свой отзыв</h2>
+      <h2 class="info__title info__title--big">Оставьте свой отзыв</h2>
       <p class="info__description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами
         достопримечательностях</p>
       </div>
 
       <form class="feedback__form form">
         <fieldset class="form__fieldset fieldset">
-          <legend class="fieldset__title">Представьтесь:</legend>
+          <p class="fieldset__title">Представьтесь:</p>
           <label class="fieldset__field field"><span class="field__label field__label--top">Имя*</span><input
             class="field__input input" type="text"  value="Пётр" placeholder="Имя" required></label>
             <label class="fieldset__field field"><span class="field__label field__label--top">Фамилия*</span><input
@@ -70,15 +72,15 @@
 
               </fieldset>
               <fieldset class="form__fieldset fieldset">
-                <legend class="fieldset__title">Контактная информация:</legend>
-                <label class="fieldset__field field"><span class="field__label">Контактный телефон*</span><input
+                <p class="fieldset__title">Контактная информация:</p>
+                <label class="fieldset__field field"><span class="field__label field__label--top">Контактный телефон*</span><input
                   class="field__input input input--tel" type="tel" placeholder="Введите телефон" required></label>
-                  <label class="fieldset__field field"><span class="field__label">Электронная почта*</span><input
+                  <label class="fieldset__field field"><span class="field__label field__label--top">Электронная почта*</span><input
                     class="field__input input input--email" type="email" placeholder="Введите e-mail" required></label>
                   </fieldset>
 
                   <fieldset class="form__fieldset fieldset">
-                    <legend class="fieldset__title">Ваше общее впечатление:</legend>
+                    <p class="fieldset__title">Ваше общее впечатление:</p>
                     <ul class="fieldset__fields">
                       <li class="fieldset__field">
                         <label class="field">
@@ -107,7 +109,7 @@
           </ul>
         </fieldset>
         <fieldset class="form__fieldset fieldset">
-          <legend class="fieldset__title">Посещенные достопримечательности:</legend>
+          <p class="fieldset__title">Посещенные достопримечательности:</p>
           <ul class="fieldset__fields">
             <li class="fieldset__field">
               <label class="field">
@@ -140,13 +142,13 @@
         </ul>
       </fieldset>
       <fieldset class="form__fieldset fieldset">
-        <legend class="fieldset__title">Опишите свои эмоции:</legend>
+        <p class="fieldset__title">Опишите свои эмоции:</p>
         <textarea class="fieldset__field input input--multiline"
         name="comment" placeholder="Опишите подробно все свои восторги"></textarea>
       </fieldset>
       <div class="button-send">
         <button class="form__submit button" type="submit">Отправить отзыв</button>
-        <p class="form__note">*-обязательные поля</p>
+        <p class="form__note">* - обязательные поля</p>
       </div>
     </form>
   </main>

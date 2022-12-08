@@ -12,7 +12,7 @@
   }
 
   @media (min-width: variables.$tablet-width) {
-    min-height: 331px;
+    min-height: 256px;
     width: 33.3%;
     flex-shrink: 0;
     box-sizing: border-box;
@@ -22,6 +22,11 @@
 .info-tile__title {
   @include title.title();
   text-align: center;
+  margin: 8px 20px 16px 7px;
+
+  @media (min-width: variables.$tablet-width) {
+    @include title.title-medium();
+  }
 
   &--white {
     color: #ffffff;
@@ -36,6 +41,7 @@
 .info-tile__text {
   @include text.text();
   text-align: center;
+  margin: 0 7px;
 
   &--left {
     text-align: left;

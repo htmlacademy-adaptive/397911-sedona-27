@@ -35,6 +35,10 @@
     line-height: 21px;
     padding-top: 18px;
     padding-bottom: 17px;
+
+    &--current {
+      color: #766357;
+    }
   }
 }
 
@@ -42,12 +46,11 @@
   text-align: center;
 
   @media (max-width: variables.$tablet-width) {
-
     width: 100%;
     box-sizing: border-box;
-
     border-bottom: 1px solid rgba(1, 1, 1, 0.2);
     position: relative;
+
 
     &:last-child {
       border-bottom: 0;
