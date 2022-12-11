@@ -3,4 +3,10 @@
 .copyright__text {
   @include text.text();
   text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.copyright__text svg {
+  margin-left: 12px;
 }

@@ -1,4 +1,5 @@
 @use "../variables.scss";
+@use "../mixins/media.scss";
 
 .main-container__title {
   margin: 0 auto;
@@ -7,7 +8,7 @@
   width: 461px;
   height: 350px;
 
-  @media (max-width: variables.$tablet-width) {
+  @include media.for-mobile {
     max-height: 214px;
   }
 }
@@ -33,8 +34,10 @@
   }
 
 
-  @media (min-width: variables.$tablet-width) {
+  @include media.for-tablet-and-desktop {
     background: url("../img/background.jpg") center bottom no-repeat;
+    background-size: cover;
+    background-color: #000000;
     padding: 77px 19px 91px 19px;
   }
 }

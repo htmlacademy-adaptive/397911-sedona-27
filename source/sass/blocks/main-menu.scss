@@ -1,6 +1,7 @@
 @use "sass:math";
 @use "../mixins/title.scss";
 @use "../variables.scss";
+@use "../mixins/media.scss";
 
 .main-menu {
   list-style: none;
@@ -8,11 +9,11 @@
   padding: 0;
   width: 100%;
 
-  @media (max-width: variables.$tablet-width) {
+  @include media.for-mobile {
     background-color: #81b3d2;
   }
 
-  @media (min-width: variables.$tablet-width) {
+  @include media.for-tablet-and-desktop {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -25,12 +26,12 @@
   text-decoration: none;
   display: block;
 
-  @media (max-width: variables.$tablet-width) {
+  @include media.for-mobile {
     color: #ffffff;
     padding: 17px 17px 12px;
   }
 
-  @media (min-width: variables.$tablet-width) {
+  @include media.for-tablet-and-desktop {
     font-size: 14px;
     line-height: 21px;
     padding-top: 18px;
@@ -45,7 +46,7 @@
 .main-menu__item {
   text-align: center;
 
-  @media (max-width: variables.$tablet-width) {
+  @include media.for-mobile {
     width: 100%;
     box-sizing: border-box;
     border-bottom: 1px solid rgba(1, 1, 1, 0.2);
@@ -72,7 +73,7 @@
     }
   }
 
-  @media (min-width: variables.$tablet-width) {
+  @include media.for-tablet-and-desktop {
     &:nth-child(4n + 2) {
       margin-right: variables.$logo-width;
     }

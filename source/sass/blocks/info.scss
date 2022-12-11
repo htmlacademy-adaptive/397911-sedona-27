@@ -1,17 +1,20 @@
 @use "../mixins/title.scss";
 @use "../mixins/text.scss";
 @use "../mixins/heading.scss";
+@use "../mixins/media.scss";
 @use "../variables.scss";
 
 .info {
-  padding: 32px 18px;
+  padding: 34px 18px 38px 18px;
   position: relative;
 
-  // &--decorate-bottom {
-  //   overflow: hidden;
-  // }
+  @include media.for-mobile {
+    &--interested {
+      padding-top: 38px;
+    }
+  }
 
-  @media (max-width: variables.$tablet-width) {
+  @include media.for-mobile {
     &--decorate-bottom::after {
       content: "";
       background: url("../img/divider-buttom.svg") top center no-repeat;
@@ -27,13 +30,17 @@
     }
   }
 
-  @media (min-width: variables.$tablet-width) {
+  @include media.for-tablet-and-desktop {
     max-width: 520px;
     margin: auto;
   }
 }
 
 .info__title {
+  margin: 0;
+  padding: 0;
+
+
   @include title.title();
   text-align: center;
 
@@ -41,15 +48,11 @@
     @include heading.heading();
   }
 
-  @media (min-width: variables.$tablet-width) {
+  @include media.for-tablet-and-desktop {
     @include title.title-medium();
 
     &--big {
       @include heading.heading-big();
-    }
-
-    br {
-      display: none;
     }
   }
 }
@@ -57,18 +60,21 @@
 .info__description {
   @include text.text();
   text-align: center;
+  margin: 0;
+  padding: 0;
   margin-top: 35px;
+}
 
-  @media (min-width: variables.$tablet-width) {
-    br {
-      display: none;
-    }
+@include media.for-mobile {
+  .info--interested .info__description {
+    margin-top: 21px;
   }
 }
 
 .info__button {
   max-width: 458px;
   margin: 0 auto;
+  margin-top: 32px;
 }
 
 .info__video {

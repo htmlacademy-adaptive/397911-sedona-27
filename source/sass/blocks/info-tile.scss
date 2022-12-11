@@ -1,8 +1,18 @@
 @use "../mixins/title.scss";
 @use "../mixins/text.scss";
+@use "../mixins/media.scss";
 @use "../variables.scss";
 
 .info-tile {
+  position: relative;
+
+  @include media.for-tablet-and-desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   &--blue {
     background-color: #81b3d2;
   }
@@ -11,7 +21,89 @@
     background-color: #eeeeee;
   }
 
-  @media (min-width: variables.$tablet-width) {
+  &--icon-home {
+    @include media.for-mobile {
+      padding-left: 47px;
+    }
+  }
+
+  &--icon-burger {
+    @include media.for-mobile {
+      padding-left: 47px;
+    }
+  }
+
+  &--icon-gift {
+    @include media.for-mobile {
+      padding-left: 47px;
+    }
+  }
+
+  &--icon-home::before {
+    background: url("../img/icon-house.svg") no-repeat;
+    content: "";
+    display: block;
+    background-size: contain;
+
+
+    @include media.for-mobile {
+      position: absolute;
+      height: 38px;
+      width: 40px;
+      top: 0;
+      left: 0;
+    }
+
+    @include media.for-tablet {
+      width: 77px;
+      height: 75px;
+      margin: 0 auto 14px;
+    }
+  }
+
+  &--icon-burger::before {
+    background: url("../img/icon-burger.svg") no-repeat;
+    content: "";
+    display: block;
+    background-size: contain;
+
+    @include media.for-mobile {
+      position: absolute;
+      height: 36px;
+      width: 40px;
+      top: 0;
+      left: 0;
+    }
+
+    @include media.for-tablet {
+      width: 80px;
+      height: 75px;
+      margin: 0 auto 14px;
+    }
+  }
+
+  &--icon-gift::before {
+    background: url("../img/icon-gift.svg") no-repeat;
+    content: "";
+    display: block;
+    background-size: contain;
+
+    @include media.for-mobile {
+      position: absolute;
+      height: 38px;
+      width: 32px;
+      top: 0;
+      left: 4px;
+    }
+
+    @include media.for-tablet {
+      width: 67px;
+      height: 75px;
+      margin: 0 auto 14px;
+    }
+  }
+
+  @include media.for-tablet-and-desktop {
     min-height: 256px;
     width: 33.3%;
     flex-shrink: 0;
@@ -22,9 +114,10 @@
 .info-tile__title {
   @include title.title();
   text-align: center;
-  margin: 8px 20px 16px 7px;
+  margin: 0;
+  padding: 0;
 
-  @media (min-width: variables.$tablet-width) {
+  @include media.for-tablet-and-desktop {
     @include title.title-medium();
   }
 
@@ -32,8 +125,11 @@
     color: #ffffff;
   }
 
-  &--left {
-    text-align: left;
+  @include media.for-mobile {
+    &--left {
+      text-align: left;
+      margin-top: 8px;
+    }
   }
 }
 
@@ -41,9 +137,11 @@
 .info-tile__text {
   @include text.text();
   text-align: center;
-  margin: 0 7px;
 
-  &--left {
-    text-align: left;
+  @include media.for-mobile {
+    &--left {
+      text-align: left;
+      margin-top: 16px;
+    }
   }
 }

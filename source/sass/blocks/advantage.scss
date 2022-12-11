@@ -4,7 +4,7 @@
   margin: 0;
 
   &--type-1 {
-    padding: 33px 18px 40px 18px;
+    padding: 49px 15px 40px 18px;
   }
 
   &--type-2 {
@@ -25,6 +25,7 @@
   @include text.text();
   display: block;
   text-align: center;
+  margin: 11px 18px 17px 18px;
 
   &--white {
     color: #ffffff;
@@ -34,6 +35,8 @@
 .advantage__description {
   @include text.text();
   text-align: center;
+  margin: 0;
+  padding: 0;
 
   &--white {
     color: #ffffff;

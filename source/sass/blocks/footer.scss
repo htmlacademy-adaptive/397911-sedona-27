@@ -14,4 +14,11 @@
 
 .footer__hashtag {
   @include heading.heading();
+  margin-top: 29px;
+  padding: 0;
+}
+
+.footer__social-links {
+  margin-top: 12px;
+  margin-bottom: 40px;
 }

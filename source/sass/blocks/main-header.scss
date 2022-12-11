@@ -1,21 +1,22 @@
 @use "sass:math";
 @use "../variables.scss";
+@use "../mixins/media.scss";
 
 .main-header {
-  height: 56px;
+  min-height: 56px;
   display: flex;
   justify-content: flex-end;
   z-index: 1;
   position: relative;
   background-color: #ffffff;
 
-  @media (max-width: variables.$tablet-width) {
+  @include media.for-mobile {
     &--js-disabled {
       height: auto;
     }
   }
 
-  @media (min-width: variables.$desktop-width) {
+  @include media.for-desktop {
     max-width: 1200px;
   }
 }
@@ -27,9 +28,6 @@
 }
 
 .main-header__nav {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   display: none;
 
@@ -37,12 +35,22 @@
     display: block;
   }
 
-  @media (min-width: variables.$tablet-width) {
+  @include media.for-mobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  @include media.for-tablet {
+    display: block;
+  }
+
+  @include media.for-desktop {
     display: block;
   }
 }
 
-@media (max-width: variables.$tablet-width) {
+@include media.for-mobile {
   .main-header--js-disabled .main-header__nav {
     position: static;
     margin-top: 56px;
@@ -51,26 +59,27 @@
 }
 
 .main-header__toggle {
-  border: none;
-  width: 23px;
-  height: 22px;
-  padding: 0;
-  top: 17px;
-  right: 20px;
-  position: absolute;
-  cursor: pointer;
-  background-color: transparent;
+  display: none;
 
-  &:hover path {
-    fill: rgba(129, 179, 210, 0.6);
-  }
+  @include media.for-mobile {
+    display: block;
+    border: none;
+    width: 23px;
+    height: 22px;
+    padding: 0;
+    top: 17px;
+    right: 20px;
+    position: absolute;
+    cursor: pointer;
+    background-color: transparent;
 
-  &:active path {
-    fill: rgba(129, 179, 210, 0.3);
-  }
+    &:hover path {
+      fill: rgba(129, 179, 210, 0.6);
+    }
 
-  @media (min-width: variables.$tablet-width) {
-    display: none;
+    &:active path {
+      fill: rgba(129, 179, 210, 0.3);
+    }
   }
 }
 
