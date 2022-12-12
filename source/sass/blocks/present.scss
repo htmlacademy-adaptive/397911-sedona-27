@@ -1,4 +1,5 @@
 @use "../variables.scss";
+@use "../mixins/media.scss";
 
 .present {
   background: url("../img/back-desktop.jpg") center no-repeat;
@@ -9,11 +10,22 @@
   overflow: hidden;
   margin-top: -56px;
 
+  @media (min-resolution: 2dppx) {
+    background: url("../img/back-mobile@2x.jpg") center no-repeat;
+    background-size: cover;
+    background-color: #000000;
+  }
 
-  @media (min-width: variables.$tablet-width) {
+  @include media.for-tablet-and-desktop {
     background: url("../img/background.jpg") center no-repeat;
     background-size: auto;
     background-position: center bottom;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/back-desktop2x.jpg") center no-repeat;
+      background-size: cover;
+      background-color: #000000;
+    }
   }
 
   &::after {

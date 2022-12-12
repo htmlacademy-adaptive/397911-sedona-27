@@ -5,6 +5,24 @@
   text-decoration: none;
   display: flex;
   align-items: center;
+  cursor: pointer;
+
+
+  &:hover {
+    color: #81b3d2;
+  }
+
+  &:active {
+    color: #b3b3b3;
+  }
+}
+
+.copyright__text:hover path {
+  fill: #81b3d2;
+}
+
+.copyright__text:active path {
+  fill: #b3b3b3;
 }
 
 .copyright__text svg {

@@ -1,6 +1,12 @@
+@use "../mixins/media.scss";
+
 .social-list {
   padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 6px;
+
+  @include media.for-tablet {
+    padding-left: 11px;
+  }
 }

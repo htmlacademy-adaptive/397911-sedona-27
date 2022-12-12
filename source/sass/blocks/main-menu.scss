@@ -34,7 +34,7 @@
   @include media.for-tablet-and-desktop {
     font-size: 14px;
     line-height: 21px;
-    padding-top: 18px;
+    padding-top: 19px;
     padding-bottom: 17px;
 
     &--current {
@@ -74,10 +74,12 @@
   }
 
   @include media.for-tablet-and-desktop {
+    $logo-offset:153px;
+
     &:nth-child(4n + 2) {
-      margin-right: variables.$logo-width;
+      margin-right: $logo-offset;
     }
 
-    width: calc(25% - math.div(variables.$logo-width, 4));
+    width: calc(25% - math.div($logo-offset, 4));
   }
 }

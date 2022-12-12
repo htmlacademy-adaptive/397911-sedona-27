@@ -37,6 +37,10 @@
     @include media.for-mobile {
       padding-left: 47px;
     }
+
+    @include media.for-tablet {
+      transform: translate(1px, -5px);
+    }
   }
 
   &--icon-home::before {
@@ -55,6 +59,12 @@
     }
 
     @include media.for-tablet {
+      width: 77px;
+      height: 75px;
+      margin: 0 auto 14px;
+    }
+
+    @include media.for-desktop {
       width: 77px;
       height: 75px;
       margin: 0 auto 14px;
@@ -80,6 +90,12 @@
       height: 75px;
       margin: 0 auto 14px;
     }
+
+    @include media.for-desktop {
+      width: 80px;
+      height: 75px;
+      margin: 0 auto 14px;
+    }
   }
 
   &--icon-gift::before {
@@ -100,6 +116,13 @@
       width: 67px;
       height: 75px;
       margin: 0 auto 14px;
+      transform: translate(5px, 10px);
+    }
+
+    @include media.for-desktop {
+      width: 67px;
+      height: 75px;
+      margin: 0 auto 14px;
     }
   }
 
@@ -108,6 +131,23 @@
     width: 33.3%;
     flex-shrink: 0;
     box-sizing: border-box;
+  }
+}
+
+.info-tile--icon-home,
+.info-tile--icon-burger,
+.info-tile--icon-gift {
+  @include media.for-tablet {
+    padding-top: 58px;
+    padding-bottom: 46px;
+
+    & .info-tile__title {
+      margin-top: 11px;
+    }
+
+    & .info-tile__text {
+      margin-top: 23px;
+    }
   }
 }
 
@@ -143,5 +183,19 @@
       text-align: left;
       margin-top: 16px;
     }
+  }
+
+  @include media.for-tablet {
+    &--left {
+      margin-right: auto;
+      margin-left: auto;
+      width: 175px;
+    }
+  }
+}
+
+@include media.for-tablet {
+  .info-tile--grey .info-tile__title {
+    width: 150px;
   }
 }
