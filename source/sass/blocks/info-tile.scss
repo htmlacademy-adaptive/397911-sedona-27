@@ -66,8 +66,8 @@
     }
 
     @include media.for-desktop {
-      width: 77px;
-      height: 75px;
+      width: 80px;
+      height: 72px;
       margin: 0 auto 14px;
     }
   }
@@ -93,8 +93,8 @@
     }
 
     @include media.for-desktop {
-      width: 80px;
-      height: 75px;
+      width: 73px;
+      height: 69px;
       margin: 0 auto 14px;
     }
   }
@@ -121,7 +121,7 @@
     }
 
     @include media.for-desktop {
-      width: 67px;
+      width: 78px;
       height: 75px;
       margin: 0 auto 14px;
     }
@@ -141,6 +141,19 @@
   @include media.for-tablet {
     padding-top: 58px;
     padding-bottom: 46px;
+
+    & .info-tile__title {
+      margin-top: 11px;
+    }
+
+    & .info-tile__text {
+      margin-top: 23px;
+    }
+  }
+
+  @include media.for-desktop {
+    padding-top: 72px;
+    padding-bottom: 54px;
 
     & .info-tile__title {
       margin-top: 11px;
@@ -193,11 +206,25 @@
       width: 175px;
     }
   }
+
+  @include media.for-desktop {
+    &--left {
+      margin-right: auto;
+      margin-left: auto;
+      width: 300px;
+    }
+  }
 }
 
 @include media.for-tablet {
   .info-tile--grey .info-tile__title {
     width: 150px;
+  }
+}
+
+@include media.for-desktop {
+  .info-tile--grey .info-tile__title {
+    width: 152px;
   }
 }
 

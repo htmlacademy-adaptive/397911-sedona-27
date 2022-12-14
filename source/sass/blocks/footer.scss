@@ -11,11 +11,19 @@
     justify-content: center;
   }
 
-  @include media.for-tablet-and-desktop {
+  @include media.for-tablet {
     justify-content: space-between;
     flex-direction: row;
     padding-left: 61px;
     padding-right: 75px;
+    padding-top: 22px;
+  }
+
+  @include media.for-desktop {
+    justify-content: space-between;
+    flex-direction: row;
+    padding-left: 119px;
+    padding-right: 136px;
     padding-top: 22px;
   }
 }

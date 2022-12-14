@@ -16,6 +16,12 @@
     }
   }
 
+  @include media.for-desktop {
+    &--type-1 {
+      padding: 52px 85px 51px 85px;
+    }
+  }
+
   @include media.for-mobile {
     &--type-2 {
       padding: 38px 18px;
@@ -29,6 +35,13 @@
     }
   }
 
+  @include media.for-desktop {
+    &--type-2 {
+      padding: 53px 88px 51px 86px;
+      order: 2;
+    }
+  }
+
   @include media.for-mobile {
     &--type-3 {
       padding: 24px 32px 26px 32px;
@@ -37,7 +50,13 @@
 
   @include media.for-tablet {
     &--type-3 {
-      padding: 0 33px 0 33px;
+      padding: 1px 31px 0 33px;
+    }
+  }
+
+  @include media.for-desktop {
+    &--type-3 {
+      padding: 23px 33px 0 33px;
     }
   }
 
@@ -49,7 +68,13 @@
 
   @include media.for-tablet {
     &--type-4 {
-      padding: 0 42px 0 42px;
+      padding: 3px 40px 0 42px;
+    }
+  }
+
+  @include media.for-desktop {
+    &--type-4 {
+      padding: 2px 42px 0 42px;
     }
   }
 
@@ -61,7 +86,13 @@
 
   @include media.for-tablet {
     &--type-5 {
-      padding: 0 33px 0 33px;
+      padding: 5px 30px 0 33px;
+    }
+  }
+
+  @include media.for-desktop {
+    &--type-5 {
+      padding: 22px 33px 0 33px;
     }
   }
 

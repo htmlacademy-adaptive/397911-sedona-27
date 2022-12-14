@@ -1,7 +1,11 @@
 @use "../variables.scss";
+@use "../mixins/media.scss";
 
 .cfeedback__idea {
-  padding: 0 7px;
+  @include media.for-mobile {
+    padding: 0 7px;
+  }
+
 
   @media (min-width: variables.$tablet-width) {
     padding: 0 60px;

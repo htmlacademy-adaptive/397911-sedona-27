@@ -9,4 +9,8 @@
   @include media.for-tablet {
     padding-left: 11px;
   }
+
+  @include media.for-desktop {
+    padding-left: 11px;
+  }
 }

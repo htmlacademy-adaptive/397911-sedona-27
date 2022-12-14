@@ -29,6 +29,10 @@
   @include media.for-mobile {
     color: #ffffff;
     padding: 17px 17px 12px;
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 
   @include media.for-tablet-and-desktop {
@@ -39,6 +43,14 @@
 
     &--current {
       color: #766357;
+    }
+
+    &:hover {
+      color: rgba(129, 179, 210, 1);
+    }
+
+    &:active {
+      color: #b3b3b3;
     }
   }
 }
@@ -52,6 +64,13 @@
     border-bottom: 1px solid rgba(1, 1, 1, 0.2);
     position: relative;
 
+    &:hover {
+      background-color: #669ec0;
+    }
+
+    &:active {
+      background-color: #5496bd;
+    }
 
     &:last-child {
       border-bottom: 0;
@@ -73,8 +92,18 @@
     }
   }
 
-  @include media.for-tablet-and-desktop {
+  @include media.for-tablet {
     $logo-offset:153px;
+
+    &:nth-child(4n + 2) {
+      margin-right: $logo-offset;
+    }
+
+    width: calc(25% - math.div($logo-offset, 4));
+  }
+
+  @include media.for-desktop {
+    $logo-offset:240px;
 
     &:nth-child(4n + 2) {
       margin-right: $logo-offset;
