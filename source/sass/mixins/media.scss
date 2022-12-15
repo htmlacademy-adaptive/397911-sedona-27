@@ -1,0 +1,29 @@
+@use "../variables.scss";
+
+@mixin for-mobile {
+  @media (max-width: (variables.$tablet-width - 1)) {
+    @content;
+  }
+}
+
+@mixin for-tablet {
+  @media (min-width: variables.$tablet-width) and (max-width: (variables.$desktop-width - 1)) {
+    @content;
+  }
+}
+
+@mixin for-desktop {
+  @media (min-width: variables.$desktop-width) {
+    @content;
+  }
+}
+
+@mixin for-tablet-and-desktop {
+  @include for-tablet {
+    @content;
+  }
+
+  @include for-desktop {
+    @content;
+  }
+}

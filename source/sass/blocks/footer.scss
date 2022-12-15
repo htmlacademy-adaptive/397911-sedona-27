@@ -1,11 +1,46 @@
 @use "../mixins/heading.scss";
+@use "../variables.scss";
+@use "../mixins/media.scss";
 
 .footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @include media.for-mobile {
+    justify-content: center;
+  }
+
+  @include media.for-tablet {
+    justify-content: space-between;
+    flex-direction: row;
+    padding-left: 61px;
+    padding-right: 75px;
+    padding-top: 22px;
+  }
+
+  @include media.for-desktop {
+    justify-content: space-between;
+    flex-direction: row;
+    padding-left: 119px;
+    padding-right: 136px;
+    padding-top: 22px;
+  }
 }
 
 .footer__hashtag {
   @include heading.heading();
+  margin-top: 29px;
+  padding: 0;
+}
+
+.footer__social-links {
+  @include media.for-mobile {
+    margin-top: 12px;
+    margin-bottom: 40px;
+  }
+
+  @include media.for-tablet-and-desktop {
+    margin: 0;
+  }
 }

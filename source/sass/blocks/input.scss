@@ -3,19 +3,36 @@
 .input {
   display: block;
   width: 100%;
-  padding: 16px 0 16px 16px;
+  padding: 16px;
+  box-sizing: border-box;
   background: #f2f2f2;
   border: none;
-  max-width: 280px;
 
   &--multiline {
     width: 100%;
     border: none;
     height: 150px;
     background: #f2f2f2;
+    resize: none;
+
 
     @include title.title();
     text-transform: none;
     padding: 16px 0 16px 16px;
+  }
+
+  &--icon {
+
+    background-repeat: no-repeat;
+  }
+
+  &--icon-tel {
+    background-image: url("../img/phone.svg"), linear-gradient(to left, #e6e6e6 58px, transparent 58px);
+    background-position: right 20px center, right center;
+  }
+
+  &--icon-email {
+    background-image: url("../img/mail.svg"), linear-gradient(to left, #e6e6e6 58px, transparent 58px);
+    background-position: right 21px center, right center;
   }
 }

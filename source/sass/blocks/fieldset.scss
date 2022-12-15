@@ -1,17 +1,35 @@
 @use "../mixins/title.scss";
+@use "../mixins/media.scss";
 @use "../variables.scss";
 
 .fieldset {
-  display: flex;
-  flex-direction: column;
-  padding: 24px 20px 64px 20px;
+  // display: flex;
+  // flex-direction: column;
   margin: 0;
   box-sizing: border-box;
+
+  @include media.for-mobile {
+    padding: 20px 20px 24px 20px;
+  }
+
+  @include media.for-tablet {
+    padding: 20px 0 24px;
+    // TODO
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .fieldset__title {
   @include title.title();
   text-align: center;
+  margin: 0 0 20px;
+
+
+  @media (min-width: variables.$tablet-width) {
+    @include title.title-medium();
+  }
 }
 
 .fieldset__fields {
@@ -20,12 +38,32 @@
   padding: 0;
 
 
-  @media (min-width: variables.$tablet-width) {
-    display: flex;
+  @include media.for-tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    min-width: 480px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 64px;
   }
 }
 
 .fieldset__field {
-  margin-bottom: 16px;
   flex-direction: column;
 }
+
+@include media.for-mobile {
+  .fieldset__field + .fieldset__field {
+    margin-top: 16px;
+  }
+}
+
+// @include media.for-tablet {
+//   .fieldset__field + .fieldset__field {
+//     margin-top: 16px;
+//   }
+// }

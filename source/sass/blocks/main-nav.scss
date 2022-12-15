@@ -1,17 +1,27 @@
-@use "../variables.scss";
+@use "../mixins/media.scss";
 
 
 .main-nav__close {
-  height: 55px;
-  width: 61px;
-  background: url("../../img/nav-closed.svg") center no-repeat;
-  position: absolute;
-  top: 0;
-  right: 0;
-  border: none;
-  z-index: 1;
+  display: none;
 
-  @media (min-width: variables.$tablet-width) {
-    display: none;
+  @include media.for-mobile {
+    display: block;
+    height: 55px;
+    width: 61px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    z-index: 1;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover path {
+      fill: rgba(255, 255, 255, 0.6);
+    }
+
+    &:active path {
+      fill: rgba(255, 255, 255, 0.3);
+    }
   }
 }

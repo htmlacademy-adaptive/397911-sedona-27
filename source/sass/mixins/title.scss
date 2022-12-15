@@ -8,7 +8,13 @@
   text-transform: uppercase;
 }
 
-@mixin title-big() {
+@mixin title-medium() {
   @include title();
   font-size: 21px;
 }
+
+@mixin title-big() {
+  @include title();
+  font-size: 30px;
+}
+

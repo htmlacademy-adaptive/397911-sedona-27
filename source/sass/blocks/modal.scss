@@ -3,12 +3,20 @@
 
 .modal__description {
   @include text.text();
+  margin: 0;
+  padding: 0;
 }
 
 .modal__title {
   @include title.title();
-}
+  margin: 0;
+  padding: 0;
 
-.modal__button {
-  border: none;
+  // @media (min-width: variables.$tablet-width) {
+  //   @include title.title-big();
+  // }
+
+  // .modal__button {
+  //   // border: none;
+  // }
 }

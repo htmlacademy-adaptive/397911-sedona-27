@@ -1,6 +1,7 @@
 @use "sass:math";
 @use "../mixins/title.scss";
 @use "../variables.scss";
+@use "../mixins/media.scss";
 
 .main-menu {
   list-style: none;
@@ -8,11 +9,11 @@
   padding: 0;
   width: 100%;
 
-  @media (max-width: variables.$tablet-width) {
+  @include media.for-mobile {
     background-color: #81b3d2;
   }
 
-  @media (min-width: variables.$tablet-width) {
+  @include media.for-tablet-and-desktop {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -25,29 +26,51 @@
   text-decoration: none;
   display: block;
 
-  @media (max-width: variables.$tablet-width) {
+  @include media.for-mobile {
     color: #ffffff;
     padding: 17px 17px 12px;
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 
-  @media (min-width: variables.$tablet-width) {
+  @include media.for-tablet-and-desktop {
     font-size: 14px;
     line-height: 21px;
-    padding-top: 18px;
+    padding-top: 19px;
     padding-bottom: 17px;
+
+    &--current {
+      color: #766357;
+    }
+
+    &:hover {
+      color: rgba(129, 179, 210, 1);
+    }
+
+    &:active {
+      color: #b3b3b3;
+    }
   }
 }
 
 .main-menu__item {
   text-align: center;
 
-  @media (max-width: variables.$tablet-width) {
-
+  @include media.for-mobile {
     width: 100%;
     box-sizing: border-box;
-
     border-bottom: 1px solid rgba(1, 1, 1, 0.2);
     position: relative;
+
+    &:hover {
+      background-color: #669ec0;
+    }
+
+    &:active {
+      background-color: #5496bd;
+    }
 
     &:last-child {
       border-bottom: 0;
@@ -69,11 +92,23 @@
     }
   }
 
-  @media (min-width: variables.$tablet-width) {
+  @include media.for-tablet {
+    $logo-offset:153px;
+
     &:nth-child(4n + 2) {
-      margin-right: variables.$logo-width;
+      margin-right: $logo-offset;
     }
 
-    width: calc(25% - math.div(variables.$logo-width, 4));
+    width: calc(25% - math.div($logo-offset, 4));
+  }
+
+  @include media.for-desktop {
+    $logo-offset:240px;
+
+    &:nth-child(4n + 2) {
+      margin-right: $logo-offset;
+    }
+
+    width: calc(25% - math.div($logo-offset, 4));
   }
 }

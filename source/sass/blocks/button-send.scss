@@ -1,3 +1,18 @@
+@use "../variables.scss";
+@use "../mixins/media.scss";
+
 .button-send {
-  padding: 56px 20px 46px 20px;
+  display: flex;
+
+  @include media.for-mobile {
+    flex-direction: column;
+    justify-content: center;
+    padding: 32px 20px 46px 20px;
+  }
+
+  @include media.for-tablet {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
 }

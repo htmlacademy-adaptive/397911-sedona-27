@@ -1,38 +1,133 @@
 @use "../mixins/text.scss";
+@use "../mixins/media.scss";
 
 .advantage {
-  &--type-1 {
-    padding: 54px 18px 40px 18px;
+  margin: 0;
+
+  @include media.for-mobile {
+    &--type-1 {
+      padding: 49px 15px 40px 18px;
+    }
   }
 
-  &--type-2 {
-    padding: 37px 18px;
+  @include media.for-tablet {
+    &--type-1 {
+      padding: 25px 33px 0 33px;
+    }
   }
 
-  &--type-3 {
-    padding: 24px 18px 26px 18px;
+  @include media.for-desktop {
+    &--type-1 {
+      padding: 52px 85px 51px 85px;
+    }
   }
 
-  &--type-4 {
-    padding: 24px 18px 28px 18px;
+  @include media.for-mobile {
+    &--type-2 {
+      padding: 38px 18px;
+    }
   }
-}
 
-.advantage__numbers {
-  @include text.text();
-  display: block;
-  text-align: center;
-
-  &--white {
-    color: #ffffff;
+  @include media.for-tablet {
+    &--type-2 {
+      padding: 22px 33px 0 33px;
+      order: 2;
+    }
   }
-}
 
-.advantage__description {
-  @include text.text();
-  text-align: center;
+  @include media.for-desktop {
+    &--type-2 {
+      padding: 53px 88px 51px 86px;
+      order: 2;
+    }
+  }
 
-  &--white {
-    color: #ffffff;
+  @include media.for-mobile {
+    &--type-3 {
+      padding: 24px 32px 26px 32px;
+    }
+  }
+
+  @include media.for-tablet {
+    &--type-3 {
+      padding: 1px 31px 0 33px;
+    }
+  }
+
+  @include media.for-desktop {
+    &--type-3 {
+      padding: 23px 33px 0 33px;
+    }
+  }
+
+  @include media.for-mobile {
+    &--type-4 {
+      padding: 24px 32px 26px 32px;
+    }
+  }
+
+  @include media.for-tablet {
+    &--type-4 {
+      padding: 3px 40px 0 42px;
+    }
+  }
+
+  @include media.for-desktop {
+    &--type-4 {
+      padding: 2px 42px 0 42px;
+    }
+  }
+
+  @include media.for-mobile {
+    &--type-5 {
+      padding: 24px 33px 31px 33px;
+    }
+  }
+
+  @include media.for-tablet {
+    &--type-5 {
+      padding: 5px 30px 0 33px;
+    }
+  }
+
+  @include media.for-desktop {
+    &--type-5 {
+      padding: 22px 33px 0 33px;
+    }
+  }
+
+
+  .advantage__numbers {
+    @include text.text();
+    display: block;
+    text-align: center;
+
+
+    &--white {
+      color: #ffffff;
+    }
+
+    @include media.for-mobile {
+      margin: 11px 18px 16px 18px;
+    }
+
+    @include media.for-tablet {
+      margin: 11px 18px 24px 18px;
+    }
+
+    @include media.for-desktop {
+      margin: 11px 18px 24px 18px;
+    }
+  }
+
+  .advantage__description {
+    @include text.text();
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+    &--white {
+      color: #ffffff;
+    }
   }
 }

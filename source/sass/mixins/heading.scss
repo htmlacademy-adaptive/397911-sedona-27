@@ -7,3 +7,8 @@
   color: #000000;
   text-transform: uppercase;
 }
+
+@mixin heading-big() {
+  @include heading();
+  font-size: 30px;
+}

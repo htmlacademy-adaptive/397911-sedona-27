@@ -1,3 +1,5 @@
+@use "../variables.scss";
+
 .map iframe {
   display: block;
   width: 100%;
@@ -5,3 +7,31 @@
   margin: 0;
   border: none;
 }
+
+.map {
+  background-image: url("../img/map-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/map-mobile@2x.png");
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    background-image: url("../img/map-tablet.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-tablet@2x.png");
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    background-image: url("../img/map-desktop.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-desktop@2x.png");
+    }
+  }
+}
+
