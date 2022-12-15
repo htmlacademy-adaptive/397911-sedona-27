@@ -17,6 +17,8 @@
 }
 
 .photo-item__info {
+  box-sizing: border-box;
+
   @include media.for-mobile {
     margin-top: 17px;
   }
@@ -28,11 +30,6 @@
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 23px 20px 15px;
-
-
-    &:nth-child(2n+3) {
-      background-color: #eaeaea;
-    }
   }
 
   @include media.for-desktop {
@@ -51,8 +48,9 @@
   }
 }
 
-.photo-item__description {
-  @include media.for-tablet {
+@include media.for-tablet {
+  .photo-item:nth-child(2n+3) .photo-item__info {
+    background-color: #eaeaea;
   }
 }
 

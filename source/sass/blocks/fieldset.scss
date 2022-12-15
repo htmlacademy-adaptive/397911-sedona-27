@@ -5,11 +5,15 @@
 .fieldset {
   // display: flex;
   // flex-direction: column;
-  padding: 20px 20px 24px 20px;
   margin: 0;
   box-sizing: border-box;
 
+  @include media.for-mobile {
+    padding: 20px 20px 24px 20px;
+  }
+
   @include media.for-tablet {
+    padding: 20px 0 24px;
     // TODO
     display: flex;
     flex-direction: column;

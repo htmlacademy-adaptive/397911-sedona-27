@@ -35,6 +35,10 @@
   content: "";
 }
 
+.social-item__link:active::before {
+  opacity: 0.3;
+}
+
 .social-item__link--vkontakte::before {
   background-image: url("../img/vk.svg");
 }

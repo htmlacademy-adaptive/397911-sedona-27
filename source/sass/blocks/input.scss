@@ -20,4 +20,19 @@
     text-transform: none;
     padding: 16px 0 16px 16px;
   }
+
+  &--icon {
+
+    background-repeat: no-repeat;
+  }
+
+  &--icon-tel {
+    background-image: url("../img/phone.svg"), linear-gradient(to left, #e6e6e6 58px, transparent 58px);
+    background-position: right 20px center, right center;
+  }
+
+  &--icon-email {
+    background-image: url("../img/mail.svg"), linear-gradient(to left, #e6e6e6 58px, transparent 58px);
+    background-position: right 21px center, right center;
+  }
 }
