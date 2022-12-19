@@ -26,9 +26,30 @@
   text-align: center;
   margin: 0 0 20px;
 
-
   @media (min-width: variables.$tablet-width) {
     @include title.title-medium();
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      height: 1px;
+      width: 100%;
+      background-color: #dbdbdb;
+      z-index: -1;
+      left: calc(100% + 40px);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      height: 10px;
+      width: 100%;
+      background-color: #bd2727;
+      z-index: -1;
+      left: calc(100% + 40px);
+    }
   }
 }
 
@@ -62,8 +83,3 @@
   }
 }
 
-// @include media.for-tablet {
-//   .fieldset__field + .fieldset__field {
-//     margin-top: 16px;
-//   }
-// }
