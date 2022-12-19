@@ -55,11 +55,6 @@
       padding: 61px 16px 66px 18px;
     }
   }
-
-  // @include media.for-tablet-and-desktop {
-  //   max-width: 520px;
-  //   margin: auto;
-  // }
 }
 
 .info__title {
@@ -162,6 +157,6 @@
 
 .info__video {
   display: block;
-
+  width: auto;
   margin: 0 auto;
 }

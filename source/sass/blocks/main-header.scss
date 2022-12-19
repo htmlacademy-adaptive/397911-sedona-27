@@ -25,6 +25,35 @@
   position: absolute;
   left: 50%;
   margin-left: -1 * math.div(variables.$logo-width, 2);
+  display: block;
+  padding: 0;
+  color: #81b3d2;
+  background: none;
+  box-shadow: none;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    55% 100%,
+    45% 100%
+  );
+
+
+  // &:focus {
+  //   outline: none;
+  //   color: #669ec0;
+  //   background: none;
+  // }
+
+  // &:hover {
+  //   color: #669ec0;
+  //   background: none;
+  //   cursor: pointer;
+  // }
+
+  // &:active {
+  //   color: #5496bd;
+  //   background: none;
+  // }
 }
 
 .main-header__nav {

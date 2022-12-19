@@ -4,6 +4,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/180.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="./css/style.css">
   </head>
@@ -11,7 +15,7 @@
   <body class="page__body">
   <div class="page__center">
     <header class="main-header main-header--js-disabled">
-      <a class="main-header__logo">
+      <a class="main-header__logo" href="index.html">
         <img src="img/logo.svg" width="185" height="96" alt="Логотип Седоны.">
       </a>
       <button class="main-header__toggle" type="button">
@@ -60,7 +64,7 @@
         достопримечательностях</p>
       </div>
 
-      <form class="feedback__form form">
+      <form class="feedback__form form" action="https://echo.htmlacademy.ru/" method="post">
         <fieldset class="form__fieldset fieldset">
           <p class="fieldset__title">Представьтесь:</p>
           <label class="fieldset__field field"><span class="field__label field__label--top">Имя*</span><input

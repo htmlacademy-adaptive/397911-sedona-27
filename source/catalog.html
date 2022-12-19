@@ -4,6 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -11,7 +15,7 @@
 <body class="page__body">
   <div class="page__center">
     <header class="main-header main-header--js-disabled">
-      <a class="main-header__logo">
+      <a class="main-header__logo" href="index.html">
         <img src="img/logo.svg" width="185" height="96" alt="Логотип Седоны.">
       </a>
       <button class="main-header__toggle" type="button">
@@ -151,18 +155,11 @@
       <p class="info__description">Смотрите видеопрезентацию и скорее&nbsp;за билетами, пока они не подорoжали в очередной
         раз!</p>
         </header>
-
-        <!-- <picture>
-          <source media="(min-width: 1200px)" srcset="img/video-desktop.jpg img/video-desktop@2x.jpg 2x">
-          <source media="(min-width: 768px)" srcset="img/video-tablet.jpg, img/video-tablet@2x.jpg 2x">
-          <img class="info__video" src="img/video-mobile.jpg" srcset="img/video-mobile@2x.jpg 2x"alt="Видео Седоны." >
-        </picture> -->
         <picture>
           <source media="(min-width: 1200px)" srcset="img/video-presentation--desktop.jpg 1x, img/video-presentation--desktop@2x.jpg 2x">
           <source media="(min-width: 768px)" srcset="img/video-presentation--tablet.jpg 1x, img/video-presentation--tablet@2x.jpg 2x">
           <img class="info__video" src="img/video-presentation--mobile.jpg" srcset="img/video-presentation--mobile@2x.jpg 2x" alt="Видеопрезентация отдыха в Седоне.">
         </picture>
-
     </div>
   </main>
 
