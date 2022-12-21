@@ -23,3 +23,15 @@ input[type="radio"]:checked + .radio::before {
   content: "";
   display: block;
 }
+
+label:hover .radio {
+  background: #e5e5e5;
+}
+
+label:active .radio {
+  background: #d5d5d5;
+
+  &::before {
+    opacity: 0.3;
+  }
+}

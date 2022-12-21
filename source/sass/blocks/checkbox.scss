@@ -20,3 +20,15 @@ input[type="checkbox"]:checked + .checkbox::before {
   width: 22px;
   height: 16px;
 }
+
+label:hover .checkbox {
+  background: #e5e5e5;
+}
+
+label:active .checkbox {
+  background: #d5d5d5;
+
+  &::before {
+    opacity: 0.3;
+  }
+}
