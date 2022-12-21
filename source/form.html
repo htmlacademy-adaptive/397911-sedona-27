@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,210 +10,212 @@
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="./css/style.css">
   </head>
-
   <body class="page__body">
-  <div class="page__center">
-    <header class="main-header main-header--js-disabled">
-      <a class="main-header__logo" href="index.html">
-        <svg  width="185" height="96" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-          <use xlink:href="img/sprite.svg#logo">
-        </svg>
-      </a>
-      <button class="main-header__toggle" type="button">
-        <svg  width="23" height="22" aria-hidden="true" focusable="false" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
-          <use xlink:href="img/sprite.svg#toggle-open">
-        </svg>
-      <span class="visually-hidden">Открыть меню</span>
-    </button>
-      <nav class="main-header__nav main-nav">
-        <button class="main-nav__close" type="button">
-          <svg  width="23" height="22" aria-hidden="true" focusable="false" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
-           <use xlink:href="img/sprite.svg#toggle-close">
-         </svg>
-   <span class="visually-hidden">Закрыть меню</span>
-       </button>
-        <ul class="main-nav__list main-menu">
-          <li class="main-menu__item">
-            <a class="main-menu__link" href="index.html">Главная</a>
-          </li>
-          <li class="main-menu__item">
-            <a class="main-menu__link" href="catalog.html">Фото и видео</a>
-          </li>
-          <li class="main-menu__item">
-            <a class="main-menu__link main-menu__link--current" href="form.html">Форма отзыва</a>
-          </li>
-          <li class="main-menu__item">
-            <a class="main-menu__link" href="https://www.htmlacademy.ru/">html academy</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-
-  <main class="feedback">
-    <h1 class="visually-hidden">Обратная связь</h1>
-
-    <div class="feedback__present present">
-      <img class="present__logo" src="img/sedona.svg" width="229" height="39" alt="Sedona">
-    </div>
-
-    <div class="feedback__idea info">
-      <h2 class="info__title info__title--big">Оставьте свой отзыв</h2>
-      <p class="info__description">Помогите нашим отелям стать лучше! оставьте отзыв о них,<br class = "breaker"> a также о посещенных вами
-        достопримечательностях</p>
-      </div>
-
-      <form class="feedback__form form" action="https://echo.htmlacademy.ru/" method="post">
-        <fieldset class="form__fieldset fieldset">
-          <p class="fieldset__title">Представьтесь:</p>
-          <label class="fieldset__field field"><span class="field__label field__label--top">Имя*</span><input
-            class="field__input input" type="text"  value="Пётр" placeholder="Имя" required></label>
-            <label class="fieldset__field field"><span class="field__label field__label--top">Фамилия*</span><input
-              class="field__input input" type="text" value="Пустота" placeholder="Фамилия" required></label>
-              <label class="fieldset__field field"><span class="field__label field__label--top">Отчество</span><input
-                class="field__input input" type="text" value="Викторович" placeholder="Отчество"></label>
-
-              </fieldset>
-              <fieldset class="form__fieldset fieldset">
-                <p class="fieldset__title">Контактная информация:</p>
-                <label class="fieldset__field field"><span class="field__label field__label--top">Контактный телефон*</span><input
-                  class="field__input input input--icon input--icon-tel" type="tel" placeholder="Введите телефон" required></label>
-                  <label class="fieldset__field field"><span class="field__label field__label--top">Электронная почта*</span><input
-                    class="field__input input input--icon input--icon-email" type="email" placeholder="Введите e-mail" required></label>
-                  </fieldset>
-
-                  <fieldset class="form__fieldset fieldset">
-                    <p class="fieldset__title fieldset__title--decorated">Ваше общее впечатление:</p>
-                    <ul class="fieldset__fields">
-                      <li class="fieldset__field">
-                        <label class="field">
-                          <input class="field__input  visually-hidden" type="radio" name="emotional-experience" value="optimistic"
-                          checked>
-                          <span class="radio"></span>
-                          <span class="field__label field__label--right">Скорее положительное</span>
-                        </label>
-                      </li>
-                      <li class="fieldset__field">
-                        <label class="field">
-                          <input class="field__input  visually-hidden" type="radio" name="emotional-experience"
-                          value="pessimistic">
-                <span class="radio"></span>
-                <span class="field__label field__label--right">Скорее отрицательно</span>
-              </label>
+    <div class="page__center">
+      <header class="main-header main-header--js-disabled">
+        <a class="main-header__logo" href="index.html">
+          <svg width="185" height="96" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite.svg#logo">
+          </svg>
+        </a>
+        <button class="main-header__toggle" type="button">
+          <svg width="23" height="22" aria-hidden="true" focusable="false" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite.svg#toggle-open">
+          </svg>
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <nav class="main-header__nav main-nav">
+          <button class="main-nav__close" type="button">
+            <svg width="23" height="22" aria-hidden="true" focusable="false" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/sprite.svg#toggle-close">
+            </svg>
+            <span class="visually-hidden">Закрыть меню</span>
+          </button>
+          <ul class="main-nav__list main-menu">
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="index.html">Главная</a>
             </li>
-            <li class="fieldset__field">
-              <label class="field">
-                <input class="field__input  visually-hidden" type="radio" name="emotional-experience"
-                value="complicate">
-                <span class="radio"></span>
-                <span class="field__label field__label--right">Затрудняюсь ответить</span>
-              </label>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="catalog.html">Фото и видео</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link main-menu__link--current" href="form.html">Форма отзыва</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="https://www.htmlacademy.ru/">html academy</a>
             </li>
           </ul>
-        </fieldset>
-        <fieldset class="form__fieldset fieldset">
-          <p class="fieldset__title fieldset__title--decorated">Посещенные<br />достопримечательности:</p>
-          <ul class="fieldset__fields">
-            <li class="fieldset__field">
-              <label class="field">
-                <input class="field__input  visually-hidden" type="checkbox" name="Devil bridge" checked>
-                <span class="checkbox"></span>
-                <span class="field__label field__label--right">Мост Дьявола</span>
-              </label>
-            </li>
-            <li class="fieldset__field">
-              <label class="field">
-                <input class="field__input  visually-hidden" type="checkbox" name="Hill Bell" checked>
-                <span class="checkbox"></span>
-                <span class="field__label field__label--right">Гора-Колокол</span>
-              </label>
-            </li>
-            <li class="fieldset__field">
-              <label class="field">
-                <input class="field__input  visually-hidden" type="checkbox" name="Slide parkc" checked>
-                <span class="checkbox"></span>
-                <span class="field__label field__label--right">Слайд-парк</span>
-              </label>
-            </li>
-            <li class="fieldset__field">
-            <label class="field">
-              <input class="field__input  visually-hidden" type="checkbox" name="Red rock">
-              <span class="checkbox"></span>
-              <span class="field__label field__label--right">Красные скалы</span>
+        </nav>
+      </header>
+      <main class="feedback">
+        <h1 class="visually-hidden">Обратная связь</h1>
+        <div class="feedback__present present">
+          <img class="present__logo" src="img/sedona.svg" width="229" height="39" alt="Sedona">
+        </div>
+        <div class="feedback__idea info">
+          <h2 class="info__title info__title--big">Оставьте свой отзыв</h2>
+          <p class="info__description">Помогите нашим отелям стать лучше! оставьте отзыв о них, <br class="breaker"> a также о посещенных вами достопримечательностях </p>
+        </div>
+        <form class="feedback__form form" action="https://echo.htmlacademy.ru/" method="post">
+          <fieldset class="form__fieldset fieldset">
+            <p class="fieldset__title">Представьтесь:</p>
+            <label class="fieldset__field field">
+              <span class="field__label field__label--top">Имя*</span>
+              <input class="field__input input" type="text" value="Пётр" placeholder="Имя" required>
             </label>
+            <label class="fieldset__field field">
+              <span class="field__label field__label--top">Фамилия*</span>
+              <input class="field__input input" type="text" value="Пустота" placeholder="Фамилия" required>
+            </label>
+            <label class="fieldset__field field">
+              <span class="field__label field__label--top">Отчество</span>
+              <input class="field__input input" type="text" value="Викторович" placeholder="Отчество">
+            </label>
+          </fieldset>
+          <fieldset class="form__fieldset fieldset">
+            <p class="fieldset__title">Контактная информация:</p>
+            <label class="fieldset__field field">
+              <span class="field__label field__label--top">Контактный телефон*</span>
+              <input class="field__input input input--icon input--icon-tel" type="tel" placeholder="Введите телефон" required>
+            </label>
+            <label class="fieldset__field field">
+              <span class="field__label field__label--top">Электронная почта*</span>
+              <input class="field__input input input--icon input--icon-email" type="email" placeholder="Введите e-mail" required>
+            </label>
+          </fieldset>
+          <fieldset class="form__fieldset fieldset">
+            <p class="fieldset__title fieldset__title--decorated">Ваше общее впечатление:</p>
+            <ul class="fieldset__fields">
+              <li class="fieldset__field">
+                <div class="field">
+                  <label class="field__label field__label--right">
+                    <input class="field__input  visually-hidden" type="radio" name="emotional-experience" value="optimistic" checked>
+                    <span class="radio"></span>
+                    Скорее положительное
+                  </label>
+                </div>
+              </li>
+              <li class="fieldset__field">
+                <div class="field">
+                  <label class="field__label field__label--right">
+                    <input class="field__input  visually-hidden" type="radio" name="emotional-experience" value="pessimistic">
+                    <span class="radio"></span>
+                    Скорее отрицательно
+                  </label>
+                </label>
+              </li>
+              <li class="fieldset__field">
+                <div class="field">
+                  <label class="field__label field__label--right">
+                    <input class="field__input  visually-hidden" type="radio" name="emotional-experience" value="complicate">
+                    <span class="radio"></span>
+                    Затрудняюсь ответить
+                  </label>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="form__fieldset fieldset">
+            <p class="fieldset__title fieldset__title--decorated">Посещенные <br />достопримечательности: </p>
+            <ul class="fieldset__fields">
+              <li class="fieldset__field">
+                <div class="field">
+                  <label class="field__label field__label--right">
+                    <input class="field__input  visually-hidden" type="checkbox" name="Devil bridge" checked>
+                    <span class="checkbox"></span>
+                    Мост Дьявола
+                  </label>
+                </div>
+              </li>
+              <li class="fieldset__field">
+                <div class="field">
+                  <label class="field__label field__label--right">
+                    <input class="field__input  visually-hidden" type="checkbox" name="Hill Bell" checked>
+                    <span class="checkbox"></span>
+                    Гора-Колокол
+                  </label>
+                </div>
+              </li>
+              <li class="fieldset__field">
+                <div class="field">
+                  <label class="field__label field__label--right">
+                    <input class="field__input  visually-hidden" type="checkbox" name="Slide parkc" checked>
+                    <span class="checkbox"></span>
+                    Слайд-парк
+                  </label>
+                </div>
+              </li>
+              <li class="fieldset__field">
+                <div class="field">
+                  <label class="field__label field__label--right">
+                    <input class="field__input  visually-hidden" type="checkbox" name="Red rock">
+                    <span class="checkbox"></span>
+                    Красные скалы
+                  </label>
+                </div>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="form__fieldset fieldset">
+            <p class="fieldset__title fieldset__title--decorated">Опишите свои эмоции:</p>
+            <textarea class="fieldset__field input input--multiline" name="comment" placeholder="Опишите подробно все свои восторги"></textarea>
+          </fieldset>
+          <div class="button-send">
+            <button class="form__submit button" type="submit">Отправить отзыв</button>
+            <p class="form__note">* - обязательные поля</p>
+          </div>
+        </form>
+      </main>
+      <footer class="main-footer footer">
+        <p class="footer__hashtag heading">#visitSEDONA</p>
+        <ul class="footer__social-links social-list">
+          <li class="social-list__item social-item">
+            <a class="social-item__link" href="https://vk.com/htmlacademy">
+              <span class="visually-hidden social-item__description">Вконтакте</span>
+              <svg class="social-item__icon" width="24" height="24" aria-hidden="true" focusable="false" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#socials-vk">
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item social-item">
+            <a class="social-item__link" href="https://t.me/htmlacademy">
+              <span class="visually-hidden social-list__description">Telegram</span>
+              <svg class="social-item__icon" width="24" height="24" aria-hidden="true" focusable="false" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#socials-tg">
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item social-item">
+            <a class="social-item__link" href="https://www.youtube.com/user/htmlacademyru">
+              <span class="visually-hidden social-item__description">YouTube</span>
+              <svg class="social-item__icon" width="24" height="24" aria-hidden="true" focusable="false" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#socials-youtube">
+              </svg>
+            </a>
           </li>
         </ul>
-      </fieldset>
-      <fieldset class="form__fieldset fieldset">
-        <p class="fieldset__title fieldset__title--decorated">Опишите свои эмоции:</p>
-        <textarea class="fieldset__field input input--multiline"
-        name="comment" placeholder="Опишите подробно все свои восторги"></textarea>
-      </fieldset>
-      <div class="button-send">
-        <button class="form__submit button" type="submit">Отправить отзыв</button>
-        <p class="form__note">* - обязательные поля</p>
+        <div class="footer__copyright copyright">
+          <a href="#" class="copyright__text"> Разработано <svg class="copyright__icon" width="27" height="35" aria-hidden="true" focusable="false" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/sprite.svg#htmlacademy-logo">
+            </svg>
+          </a>
+        </div>
+      </footer>
+    </div>
+    <div class="backdrop">
+      <div class="backdrop__content modal">
+        <h3 class="modal__title">Что-то пошло не так!</h3>
+        <p class="modal__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        <button class="modal__button button button--small" type="button">Ок</button>
       </div>
-    </form>
-  </main>
-
-
-  <footer class="main-footer footer">
-    <p class="footer__hashtag heading">#visitSEDONA</p>
-
-    <ul class="footer__social-links social-list">
-      <li class="social-list__item social-item">
-        <a class="social-item__link" href="https://vk.com/htmlacademy">
-          <span class="visually-hidden social-item__description">Вконтакте</span>
-          <svg class="social-item__icon" width="24" height="24" aria-hidden="true" focusable="false" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="img/sprite.svg#socials-vk">
-          </svg>
-        </a>
-      </li>
-      <li class="social-list__item social-item">
-        <a class="social-item__link" href="https://t.me/htmlacademy">
-          <span class="visually-hidden social-list__description">Telegram</span>
-          <svg class="social-item__icon" width="24" height="24" aria-hidden="true" focusable="false" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="img/sprite.svg#socials-tg">
-          </svg>
-        </a>
-      </li>
-      <li class="social-list__item social-item">
-        <a class="social-item__link" href="https://www.youtube.com/user/htmlacademyru">
-          <span class="visually-hidden social-item__description">YouTube</span>
-          <svg class="social-item__icon" width="24" height="24" aria-hidden="true" focusable="false" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="img/sprite.svg#socials-youtube">
-          </svg>
-        </a>
-      </li>
-    </ul>
-
-    <div class="footer__copyright copyright">
-      <a href="#" class="copyright__text">
-        Разработано
-        <svg class="copyright__icon" width="27" height="35" aria-hidden="true" focusable="false" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
-          <use xlink:href="img/sprite.svg#htmlacademy-logo">
-        </svg>
-      </a>
     </div>
-  </footer>
-  </div>
-
-  <div class="backdrop">
-    <div class="backdrop__content modal">
-      <h3 class="modal__title">Что-то пошло не так!</h3>
-      <p class="modal__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-      <button class="modal__button button button--small" type="button">Ок</button>
+    <div class="backdrop">
+      <div class="backdrop__content modal">
+        <h3 class="modal__title">Ваш отзыв отправлен</h3>
+        <p class="modal__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте. </p>
+        <button class="modal__button button button--small" type="button">Закрыть окно</button>
+      </div>
     </div>
-  </div>
-  <div class="backdrop">
-    <div class="backdrop__content modal">
-      <h3 class="modal__title">Ваш отзыв отправлен</h3>
-      <p class="modal__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы
-        опубликуем его на сайте.</p>
-      <button class="modal__button button button--small" type="button">Закрыть окно</button>
-    </div>
-  </div>
-  <script src="js/script.js"></script>
-</body>
-
+    <script src="js/script.js"></script>
+  </body>
 </html>

@@ -40,13 +40,13 @@
   &--right {
     @include title.title();
     text-transform: none;
-    margin-left: 16px;
     cursor: pointer;
     align-self: center;
+    position: relative;
+    margin: 10px 0 10px 62px;
   }
 
   &--top {
-
     margin-left: 16px;
   }
 }
