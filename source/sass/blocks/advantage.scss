@@ -123,11 +123,51 @@
   .advantage__description {
     @include text.text();
     text-align: center;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
 
     &--white {
       color: #ffffff;
     }
   }
+
+  @include media.for-mobile {
+    .advantage__description--white {
+      width: 284px;
+    }
+
+    .advantage__description--black {
+      width: 257px;
+    }
+
+    .breaker {
+      display: none;
+    }
+  }
+
+  @include media.for-tablet {
+    .advantage__description--white {
+      width: 195px;
+    }
+
+    .breaker {
+      display: none;
+    }
+
+    .advantage__description--black {
+      width: 190px;
+    }
+  }
+
+  @include media.for-desktop {
+    .advantage__description--white {
+      width: 290px;
+      margin: 0;
+    }
+
+    .advantage__description--black {
+      width: 300px;
+    }
+  }
 }
+

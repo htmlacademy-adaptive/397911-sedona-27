@@ -32,6 +32,8 @@
 }
 
 .catalog__persuasions {
+  text-align: center;
+
   @include media.for-mobile {
     padding: 17px 16px 0 20px;
   }

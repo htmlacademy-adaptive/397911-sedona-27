@@ -25,35 +25,19 @@
   position: absolute;
   left: 50%;
   margin-left: -1 * math.div(variables.$logo-width, 2);
-  display: block;
-  padding: 0;
-  color: #81b3d2;
-  background: none;
-  box-shadow: none;
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    55% 100%,
-    45% 100%
-  );
 
 
-  // &:focus {
-  //   outline: none;
-  //   color: #669ec0;
-  //   background: none;
-  // }
+  &:focus {
+    opacity: 0.6;
+  }
 
-  // &:hover {
-  //   color: #669ec0;
-  //   background: none;
-  //   cursor: pointer;
-  // }
+  &:hover {
+    opacity: 0.6;
+  }
 
-  // &:active {
-  //   color: #5496bd;
-  //   background: none;
-  // }
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .main-header__nav {
@@ -101,13 +85,17 @@
     position: absolute;
     cursor: pointer;
     background-color: transparent;
+    color: #81b3d2;
+    fill: transparent;
 
-    &:hover path {
+    &:hover use {
       fill: rgba(129, 179, 210, 0.6);
+      color: transparent;
     }
 
-    &:active path {
+    &:active use {
       fill: rgba(129, 179, 210, 0.3);
+      color: transparent;
     }
   }
 }

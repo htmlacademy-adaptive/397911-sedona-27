@@ -173,6 +173,7 @@
 
   @include media.for-tablet-and-desktop {
     @include title.title-medium();
+    width: 200px;
   }
 
   &--white {
@@ -196,6 +197,11 @@
     &--left {
       text-align: left;
       margin-top: 16px;
+      width: 237px;
+    }
+
+    .breaker {
+      display: none;
     }
   }
 
@@ -203,7 +209,7 @@
     &--left {
       margin-right: auto;
       margin-left: auto;
-      width: 175px;
+      width: 190px;
     }
   }
 

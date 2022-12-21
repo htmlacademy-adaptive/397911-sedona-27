@@ -58,15 +58,20 @@
 }
 
 .info__title {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-
 
   @include title.title();
   text-align: center;
 
+  @include media.for-mobile {
+    width: 280px;
+  }
+
   @include media.for-tablet-and-desktop {
     @include title.title-medium();
+    width: 520px;
+
 
     &--big {
       @include heading.heading-big();
@@ -84,12 +89,20 @@
 .info__description {
   @include text.text();
   text-align: center;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   margin-top: 35px;
 }
 
 @include media.for-mobile {
+  .info__description {
+    width: 280px;
+
+    .breaker {
+      display: none;
+    }
+  }
+
   .info--interested .info__description {
     margin-top: 24px;
   }
@@ -105,6 +118,10 @@
 }
 
 @include media.for-tablet {
+  .info__description {
+    width: 520px;
+  }
+
   .info--sedona .info__description {
     margin-top: 30px;
   }
@@ -127,6 +144,10 @@
 }
 
 @include media.for-desktop {
+  .info__description {
+    width: 520px;
+  }
+
   .info--sedona .info__description {
     margin-top: 29px;
   }
@@ -156,7 +177,7 @@
 }
 
 .info__video {
-  display: block;
+  display: inline-block;
   width: auto;
   margin: 0 auto;
 }

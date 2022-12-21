@@ -6,8 +6,7 @@
 
   // &:focus {
   //   outline: none;
-  //   box-shadow: 0 0 1px 2px $background-primary,
-  //     0 0 2px 4px $background-secondary;
+  //   background-color: #669ec0;
   // }
 
   &:hover {
@@ -26,27 +25,14 @@
   }
 }
 
-.social-item__link::before {
-  display: block;
+.social-item__link {
+  display: flex;
   width: 100%;
   height: 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  content: "";
+  justify-content: center;
+  align-items: center;
 }
 
-.social-item__link:active::before {
+.social-item__link:active .social-item__icon {
   opacity: 0.3;
-}
-
-.social-item__link--vkontakte::before {
-  background-image: url("../img/vk.svg");
-}
-
-.social-item__link--telegram::before {
-  background-image: url("../img/telegram.svg");
-}
-
-.social-item__link--youtube::before {
-  background-image: url("../img/youtube.svg");
 }
