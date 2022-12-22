@@ -70,7 +70,7 @@
 
   @include media.for-tablet-and-desktop {
     @include title.title-medium();
-    width: 520px;
+    // width: 520px;
 
 
     &--big {
@@ -143,22 +143,22 @@
   }
 }
 
-@include media.for-desktop {
-  .info__description {
-    width: 520px;
-  }
+// @include media.for-desktop {
+//   .info__description {
+//     width: 520px;
+//   }
 
-  .info--sedona .info__description {
-    margin-top: 29px;
-  }
-
-  .info--interested .info__description {
-    width: 435px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 34px;
-  }
+.info--sedona .info__description {
+  margin-top: 29px;
 }
+
+.info--interested .info__description {
+  width: 435px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 34px;
+}
+
 
 .info__button {
   max-width: 458px;
