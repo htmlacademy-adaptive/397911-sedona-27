@@ -143,20 +143,17 @@
   }
 }
 
-// @include media.for-desktop {
-//   .info__description {
-//     width: 520px;
-//   }
+@include media.for-desktop {
+  .info--sedona .info__description {
+    margin-top: 29px;
+  }
 
-.info--sedona .info__description {
-  margin-top: 29px;
-}
-
-.info--interested .info__description {
-  width: 435px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 34px;
+  .info--interested .info__description {
+    width: 435px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 34px;
+  }
 }
 
 
