@@ -7,6 +7,10 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: -62px;
+  margin: -23px 0;
 }
 
 input[type="checkbox"]:checked + .checkbox::before {
@@ -15,4 +19,16 @@ input[type="checkbox"]:checked + .checkbox::before {
   background: url("../../img/tick.svg") no-repeat center;
   width: 22px;
   height: 16px;
+}
+
+label:hover .checkbox {
+  background: #e5e5e5;
+}
+
+label:active .checkbox {
+  background: #d5d5d5;
+
+  &::before {
+    opacity: 0.3;
+  }
 }

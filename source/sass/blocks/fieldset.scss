@@ -26,29 +26,34 @@
   text-align: center;
   margin: 0 0 20px;
 
-  @media (min-width: variables.$tablet-width) {
+  @include media.for-tablet-and-desktop {
     @include title.title-medium();
+    width: 100%;
+  }
+}
 
-    &::after {
+.fieldset__title--decorated {
+  @include media.for-tablet-and-desktop {
+    position: relative;
+
+    &::after,
+    &::before {
       content: "";
+      display: block;
       position: absolute;
       top: 50%;
       height: 1px;
-      width: 100%;
       background-color: #dbdbdb;
-      z-index: -1;
-      left: calc(100% + 40px);
+    }
+
+    &::after {
+      right: 0;
+      left: calc(50% + 201px);
     }
 
     &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      height: 10px;
-      width: 100%;
-      background-color: #bd2727;
-      z-index: -1;
-      left: calc(100% + 40px);
+      left: 0;
+      right: calc(50% + 201px);
     }
   }
 }

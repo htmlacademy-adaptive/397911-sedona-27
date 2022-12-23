@@ -10,7 +10,6 @@
 
   @include media.for-tablet {
     padding: 65px 0 80px 0;
-    width: 440px;
     margin: 0 auto;
   }
 
@@ -32,6 +31,8 @@
 }
 
 .catalog__persuasions {
+  text-align: center;
+
   @include media.for-mobile {
     padding: 17px 16px 0 20px;
   }

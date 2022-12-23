@@ -70,6 +70,7 @@
     margin-top: 11px;
     display: flex;
     gap: 15px;
+    color: #000000;
   }
 
   @include media.for-tablet {
@@ -105,17 +106,31 @@
 
 
 .photo-item__likes-icon {
+  cursor: pointer;
+
   @include media.for-mobile {
     opacity: 0.3;
+
+    &:hover {
+      opacity: 0.6;
+    }
   }
 
   @include media.for-tablet {
     flex-shrink: 0;
     opacity: 0.3;
+
+    &:hover {
+      opacity: 0.6;
+    }
   }
 
   @include media.for-desktop {
     fill: #ffffff;
+
+    &:hover {
+      opacity: 0.6;
+    }
   }
 }
 

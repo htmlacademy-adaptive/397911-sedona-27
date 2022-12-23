@@ -20,65 +20,22 @@
   }
 }
 
-
-.main-menu__link {
-  @include title.title();
-  text-decoration: none;
-  display: block;
-
-  @include media.for-mobile {
-    color: #ffffff;
-    padding: 17px 17px 12px;
-
-    &:active {
-      color: rgba(255, 255, 255, 0.3);
-    }
-  }
-
-  @include media.for-tablet-and-desktop {
-    font-size: 14px;
-    line-height: 21px;
-    padding-top: 19px;
-    padding-bottom: 17px;
-
-    &--current {
-      color: #766357;
-    }
-
-    &:hover {
-      color: rgba(129, 179, 210, 1);
-    }
-
-    &:active {
-      color: #b3b3b3;
-    }
-  }
-}
-
 .main-menu__item {
   text-align: center;
 
   @include media.for-mobile {
     width: 100%;
     box-sizing: border-box;
-    border-bottom: 1px solid rgba(1, 1, 1, 0.2);
+    // border-bottom: 1px solid rgba(1, 1, 1, 0.2);
     position: relative;
 
-    &:hover {
-      background-color: #669ec0;
-    }
+    // &:last-child {
+    //   border-bottom: 0;
+    // }
 
-    &:active {
-      background-color: #5496bd;
-    }
-
-    &:last-child {
-      border-bottom: 0;
-    }
-
-    &:not(:last-child) {
-      box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    }
+    // &:not(:last-child) {
+    //   box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    // }
 
     &:last-of-type::after {
       content: "";
@@ -110,5 +67,58 @@
     }
 
     width: calc(25% - math.div($logo-offset, 4));
+  }
+}
+
+
+.main-menu__link {
+  @include title.title();
+  text-decoration: none;
+  display: block;
+
+  @include media.for-mobile {
+    color: #ffffff;
+    padding: 17px 17px 12px;
+    background-color: #81b3d2;
+    box-shadow: inset 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 2px 0 rgba(255, 255, 255, 0.2);
+
+    &:hover {
+      background-color: #669ec0;
+    }
+
+    &:active {
+      color: hsla(0, 0%, 100%, 0.3);
+      background-color: #5496bd;
+    }
+  }
+
+  @include media.for-tablet-and-desktop {
+    font-size: 14px;
+    line-height: 21px;
+    padding-top: 19px;
+    padding-bottom: 17px;
+
+    &--current {
+      color: #766357;
+    }
+
+    &:hover {
+      color: rgba(129, 179, 210, 1);
+    }
+
+    &:active {
+      color: #b3b3b3;
+    }
+
+    &:focus-visible {
+      color: #669ec0;
+      outline: none;
+    }
+  }
+}
+
+.main-menu__item:nth-child(1) .main-menu__link {
+  @include media.for-mobile {
+    box-shadow: none;
   }
 }
