@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <base href="https://htmlacademy-adaptive.github.io/397911-sedona-27/8/">
+</head>
+
+<body class="page__body">
+  <div class="page__center">
+    <header class="main-header main-header--js-disabled">
+      <a class="main-header__logo" href="index.html">
+        <svg  width="185" height="96" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="img/sprite.svg#logo">
+        </svg>
+      </a>
+      <button class="main-header__toggle" type="button">
+        <svg  width="23" height="22" aria-hidden="true" focusable="false" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="img/sprite.svg#toggle-open">
+        </svg>
+      <span class="visually-hidden">Открыть меню</span>
+    </button>
+      <nav class="main-header__nav main-nav">
+        <button class="main-nav__close" type="button">
+          <svg  width="23" height="22" aria-hidden="true" focusable="false" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+           <use xlink:href="img/sprite.svg#toggle-close">
+         </svg>
+   <span class="visually-hidden">Закрыть меню</span>
+       </button>
+
+        <ul class="main-nav__list main-menu">
+          <li class="main-menu__item ">
+            <a class="main-menu__link" href="index.html">Главная</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link main-menu__link--current" href="catalog.html">Фото и видео</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="form.html">Форма отзыва</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="https://www.htmlacademy.ru/">html academy</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+
+  <main class="catalog">
+    <h1 class="visually-hidden">Фотографии сделанные в Седоне</h1>
+    <div class="catalog__present present">
+      <img class="present__logo" src="img/sedona.svg" alt="Sedona">
+    </div>
+
+    <div class="catalog__idea info">
+      <h2 class="info__title info__title--big">Фото и видео</h2>
+      <p class="info__description">Не можете решиться на путешествие из-за курса? Фотографии&nbsp;помогут&nbsp;вам забыть о
+        политике и экономике.</p>
+    </div>
+
+    <ul class="catalog__photos photos">
+      <li class="photos__item photo-item">
+        <a class="photo-item-link" href="#">
+        <picture>
+          <source media="(min-width: 769px)" srcset="img/not-native-spaces-desktop.jpg, img/not-native-spaces-desktop2x.jpg 2x">
+          <source media="(min-width: 321px)" srcset="img/not-native-spaces-tablet.jpg, img/not-native-spaces-tablet2x.jpg 2x">
+          <img class="photo-item__photo" src="img/not-native-spaces-mobile.jpg" srcset="img/not-native-spaces-mobile2x.jpg 2x" alt="Просторы седоны." >
+        </picture>
+        </a>
+        <div class="photo-item__info">
+          <div class="photo-item__description">
+            <h3 class="photo-item__title">Неродные просторы</h3>
+            <p class="photo-item__autor">Автор фото: Борис</p>
+          </div>
+          <div class="photo-item__like">
+            <svg class="photo-item__likes-icon" width="23" height="21"aria-hidden="true" focusable="false" fill="currentcolor"  xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/sprite.svg#like">
+            </svg>
+          <p class="photo-item__like-text">1350</p>
+        </div>
+        </div>
+      </li>
+      <li class="photos__item photo-item">
+        <a class="photo-item-link" href="#">
+        <picture>
+          <source media="(min-width: 769px)" srcset="img/local-vegetation-desktop.jpg, img/local-vegetation-desktop2x.jpg 2x">
+          <source media="(min-width: 321px)" srcset="img/local-vegetation-tablet.jpg, img/local-vegetation-tablet2x.jpg 2x">
+          <img class="photo-item__photo" src="img/local-vegetation-mobile.jpg" srcset="img/local-vegetation-mobile2x.jpg 2x" alt="Растительность Седоны." >
+        </picture>
+      </a>
+          <div class="photo-item__info">
+            <div class="photo-item__description">
+          <h3 class="photo-item__title">Местная растительность</h3>
+          <p class="photo-item__autor">Автор фото: Сергей</p>
+          </div>
+          <div class="photo-item__like">
+            <svg class="photo-item__likes-icon" width="23" height="21"aria-hidden="true" focusable="false" fill="currentcolor"  xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/sprite.svg#like">
+            </svg>
+          <p class="photo-item__like-text">143</p>
+          </div>
+        </div>
+      </li>
+      <li class="photos__item photo-item">
+        <a class="photo-item-link" href="#">
+        <picture>
+          <source media="(min-width: 769px)" srcset="img/road-to-north-desktop.jpg, img/road-to-north-desktop2x.jpg 2x">
+          <source media="(min-width: 321px)" srcset="img/road-to-north-tablet.jpg, img/road-to-north-tablet2x.jpg 2x">
+          <img class="photo-item__photo" src="img/road-to-north-mobile.jpg" srcset="img/road-to-north-mobile2x.jpg 2x" alt="Дороги Седоны." >
+        </picture>
+        </a>
+        <div class="photo-item__info">
+          <div class="photo-item__description">
+        <h3 class="photo-item__title">Дорога на север</h3>
+        <p class="photo-item__autor">Автор фото: Петр</p>
+        </div>
+        <div class="photo-item__like">
+          <svg class="photo-item__likes-icon" width="23" height="21"aria-hidden="true" focusable="false" fill="currentcolor"  xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite.svg#like">
+          </svg>
+        <p class="photo-item__like-text">96</p>
+        </div>
+      </div>
+      </li>
+      <li class="photos__item photo-item">
+        <a class="photo-item-link" href="#">
+        <picture>
+          <source media="(min-width: 769px)" srcset="img/devil-bridge-desktop.jpg, img/devil-bridge-desktop2x.jpg 2x">
+          <source media="(min-width: 321px)" srcset="img/devil-bridge-tablet.jpg, img/devil-bridge-tablet2x.jpg 2x">
+          <img class="photo-item__photo" src="img/devil-bridge-mobile.jpg" srcset="img/devil-bridge-mobile2x.jpg 2x" alt="Мост Дьявола." >
+        </picture>
+        </a>
+        <div class="photo-item__info">
+          <div class="photo-item__description">
+        <h3 class="photo-item__title">Мост Дьявола</h3>
+        <p class="photo-item__autor">Автор фото: Антон</p>
+      </div>
+      <div class="photo-item__like">
+        <svg class="photo-item__likes-icon" width="23" height="21"aria-hidden="true" focusable="false" fill="currentcolor"  xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="img/sprite.svg#like">
+        </svg>
+        <p class="photo-item__like-text">254</p>
+        </div>
+      </div>
+      </li>
+    </ul>
+    <div class="catalog__persuasions info">
+      <header class="catalog__persuasions-header">
+      <h2 class="info__title info__title--big">Все еще сомневаетесь?</h2>
+      <p class="info__description">Смотрите видеопрезентацию и скорее&nbsp;за билетами, пока они<br class = "breaker"> не подорoжали в очередной
+        раз!</p>
+        </header>
+        <div class="video info__video">
+          <picture>
+            <source media="(min-width: 769px)" srcset="img/video-presentation--desktop.jpg 1x, img/video-presentation--desktop@2x.jpg 2x">
+            <source media="(min-width: 321px)" srcset="img/video-presentation--tablet.jpg 1x, img/video-presentation--tablet@2x.jpg 2x">
+            <img class="video__preview" src="img/video-presentation--mobile.jpg" srcset="img/video-presentation--mobile@2x.jpg 2x" alt="Видеопрезентация отдыха в Седоне.">
+          </picture>
+          <button class="video__button" type="button">
+            <span class="visually-hidden">Начать воспроизведение видео</span>
+            <svg width="48" height="54" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/sprite.svg#video">
+            </svg>
+          </button>
+        </div>
+    </div>
+  </main>
+
+
+  <footer class="main-footer footer">
+    <p class="footer__hashtag heading">#visitSEDONA</p>
+
+    <ul class="footer__social-links social-list">
+      <li class="social-list__item social-item">
+        <a class="social-item__link" href="https://vk.com/htmlacademy">
+          <span class="visually-hidden social-item__description">Вконтакте</span>
+          <svg class="social-item__icon" width="24" height="24" aria-hidden="true" focusable="false" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite.svg#socials-vk">
+          </svg>
+        </a>
+      </li>
+      <li class="social-list__item social-item">
+        <a class="social-item__link" href="https://t.me/htmlacademy">
+          <span class="visually-hidden social-list__description">Telegram</span>
+          <svg class="social-item__icon" width="24" height="24" aria-hidden="true" focusable="false" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite.svg#socials-tg">
+          </svg>
+        </a>
+      </li>
+      <li class="social-list__item social-item">
+        <a class="social-item__link" href="https://www.youtube.com/user/htmlacademyru">
+          <span class="visually-hidden social-item__description">YouTube</span>
+          <svg class="social-item__icon" width="24" height="24" aria-hidden="true" focusable="false" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite.svg#socials-youtube">
+          </svg>
+        </a>
+      </li>
+    </ul>
+
+    <div class="footer__copyright copyright">
+      <a href="#" class="copyright__text">
+        Разработано
+        <svg class="copyright__icon" width="27" height="35" aria-hidden="true" focusable="false" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="img/sprite.svg#htmlacademy-logo">
+        </svg>
+      </a>
+    </div>
+  </footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
