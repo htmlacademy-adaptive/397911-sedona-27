@@ -21,6 +21,10 @@ input[type="checkbox"]:checked + .checkbox::before {
   height: 16px;
 }
 
+input[type="checkbox"]:focus + .checkbox {
+  box-shadow: 0 0 1px 2px #ffffff, 0 0 2px 4px #81b3d2;
+}
+
 label:hover .checkbox {
   background: #e5e5e5;
 }

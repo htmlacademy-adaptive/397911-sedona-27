@@ -6,11 +6,6 @@
   display: block;
   max-width: 100%;
   width: 461px;
-  height: 350px;
-
-  @include media.for-mobile {
-    max-height: 214px;
-  }
 }
 
 .main-container__img {
