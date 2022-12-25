@@ -70,8 +70,6 @@
 
   @include media.for-tablet-and-desktop {
     @include title.title-medium();
-    // width: 520px;
-
 
     &--big {
       @include heading.heading-big();
@@ -118,10 +116,6 @@
 }
 
 @include media.for-tablet {
-  .info__description {
-    width: 520px;
-  }
-
   .info--sedona .info__description {
     margin-top: 30px;
   }
@@ -135,6 +129,7 @@
 
   .catalog__idea .info__description {
     margin-top: 33px;
+    width: 520px;
   }
 
   .catalog__persuasions .info__description {

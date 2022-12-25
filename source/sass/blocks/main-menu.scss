@@ -26,16 +26,7 @@
   @include media.for-mobile {
     width: 100%;
     box-sizing: border-box;
-    // border-bottom: 1px solid rgba(1, 1, 1, 0.2);
     position: relative;
-
-    // &:last-child {
-    //   border-bottom: 0;
-    // }
-
-    // &:not(:last-child) {
-    //   box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    // }
 
     &:last-of-type::after {
       content: "";
@@ -112,7 +103,6 @@
 
     &:focus-visible {
       color: #669ec0;
-      outline: none;
     }
   }
 }

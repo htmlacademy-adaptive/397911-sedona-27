@@ -81,7 +81,7 @@ const svg = () =>
   .pipe(svgo())
   .pipe(gulp.dest('build/img'));
 
-  const sprite = () => {
+const sprite = () => {
   return gulp.src('source/img/sprite/*.svg')
     .pipe(svgo())
     .pipe(svgstore({
@@ -93,22 +93,22 @@ const svg = () =>
 
 // Copy
 
-const copy = (done) => {
-  gulp.src([
-  'source/fonts/*.{woff2,woff}',
-  'source/*.ico','source/*.webmanifest',
-  ], {
-  base: 'source'
-  })
-  .pipe(gulp.dest('build'))
-  done();
-  }
+const copy = () => {
+  return gulp.src([
+      'source/favicon.*',
+      'source/fonts/*.{woff2,woff}',
+      'source/*.webmanifest',
+    ], {
+      base: 'source'
+    })
+    .pipe(gulp.dest('build'));
+}
 
-  // Clean
+// Clean
 
 const clean = () => {
   return del('build');
-  };
+};
 
 // Server
 
@@ -120,6 +120,7 @@ const server = (done) => {
     cors: true,
     notify: false,
     ui: false,
+    open: false,
   });
   done();
 }
@@ -129,7 +130,7 @@ const server = (done) => {
 const reload = (done) => {
   browser.reload();
   done();
-  }
+}
 
 // Watcher
 
@@ -137,7 +138,7 @@ const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
   gulp.watch('source/js/script.js', gulp.series(scripts));
   gulp.watch('source/*.html', gulp.series(html, reload));
-  }
+}
 
 // Build
 
@@ -146,31 +147,30 @@ export const build = gulp.series(
   copy,
   optimizeImages,
   gulp.parallel(
-  styles,
-  html,
-  scripts,
-  svg,
-  sprite,
-  createWebp
+    styles,
+    html,
+    scripts,
+    svg,
+    sprite,
+    createWebp
   ),
-  );
+);
 
-  // Default
+// Default
 
-  export default gulp.series(
+export default gulp.series(
   clean,
   copy,
   copyImages,
   gulp.parallel(
-  styles,
-  html,
-  scripts,
-  svg,
-  sprite,
-  createWebp
+    styles,
+    html,
+    scripts,
+    svg,
+    sprite,
+    createWebp
   ),
   gulp.series(
-  server,
-  watcher
+    server,
+    watcher
   ));
-
