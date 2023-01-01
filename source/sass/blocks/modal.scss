@@ -1,22 +1,117 @@
 @use "../mixins/text.scss";
 @use "../mixins/title.scss";
+@use "../mixins/media.scss";
+
+.modal {
+  background-color: #FFFFFF;
+
+  @include media.for-mobile {
+    width: 100%;
+  }
+}
+
+.modal--narrow {
+  @include media.for-tablet-and-desktop {
+    width: 400px;
+  }
+}
+
+.modal--wide {
+  @include media.for-tablet-and-desktop {
+    width: 640px;
+  }
+}
+
+.modal__header,
+.modal__footer {
+  @include media.for-mobile {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @include media.for-tablet-and-desktop {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+
+.modal__header {
+  @include media.for-mobile {
+    padding-top: 39px;
+    padding-bottom: 30px;
+  }
+  @include media.for-tablet-and-desktop {
+    padding-top: 45px;
+    padding-bottom: 51px;
+  }
+}
+
+.modal__footer {
+  background-color: #F2F2F2;
+
+  @include media.for-mobile {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+  }
+  @include media.for-tablet-and-desktop {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+}
 
 .modal__description {
   @include text.text();
-  margin: 0;
+  text-align: center;
+  line-height: 22px;
+  margin: 0 auto;
   padding: 0;
+
+  @include media.for-mobile {
+    margin-top: 28px;
+    max-width: 220px;
+    line-height: 21px;
+  }
+  @include media.for-tablet-and-desktop {
+    margin-top: 22px;
+  }
 }
 
 .modal__title {
-  @include title.title();
+  text-align: center;
   margin: 0;
   padding: 0;
 
-  // @media (min-width: variables.$tablet-width) {
-  //   @include title.title-big();
-  // }
+  @include media.for-mobile {
+    @include text.text();
+    font-weight: 700;
+    font-size: 18px;
+  }
 
-  // .modal__button {
-  //   // border: none;
-  // }
+  @include media.for-tablet-and-desktop {
+    @include title.title();
+    font-size: 29px;
+    line-height: 42px;
+  }
+}
+
+.modal__button {
+  width: 100%;
+  @include media.for-mobile {
+    font-size: 18px;
+  }
+  @include media.for-tablet-and-desktop {
+    font-size: 21px;
+  }
+}
+
+.modal__description + .modal__button {
+  @include media.for-mobile {
+    margin-top: 28px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 180px;
+  }
+  @include media.for-tablet-and-desktop {
+    margin-top: 45px;
+  }
 }
