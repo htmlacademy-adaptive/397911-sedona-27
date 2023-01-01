@@ -1,10 +1,8 @@
 @use "../mixins/media.scss";
 
 .main-footer {
-  padding: 29px 23px;
-
   @include media.for-mobile {
-    padding-top: 10px;
+    padding: 29px 23px;
   }
 
   @include media.for-tablet {
