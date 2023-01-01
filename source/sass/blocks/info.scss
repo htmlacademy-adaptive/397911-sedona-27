@@ -38,7 +38,7 @@
 
   @include media.for-tablet {
     &--sedona {
-      padding: 47px 18px 55px 18px;
+      padding: 48px 18px 55px 18px;
     }
 
     &--interested {
@@ -48,7 +48,7 @@
 
   @include media.for-desktop {
     &--sedona {
-      padding: 59px 21px 43px 18px;
+      padding: 59px 21px 44px 18px;
     }
 
     &--interested {
@@ -81,6 +81,11 @@
   @include media.for-mobile {
     font-size: 21px;
     line-height: 18px;
+  }
+}
+.info--sedona .info--title {
+  @include media.for-tablet {
+    line-height: 28px;
   }
 }
 
@@ -117,14 +122,15 @@
 
 @include media.for-tablet {
   .info--sedona .info__description {
-    margin-top: 30px;
+    margin-top: 29px;
   }
 
   .info--interested .info__description {
     width: 435px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 34px;
+    margin-top: 31px;
+    line-height: 22px;
   }
 
   .catalog__idea .info__description {
@@ -147,7 +153,8 @@
     width: 435px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 34px;
+    margin-top: 31px;
+    line-height: 22px;
   }
 }
 
@@ -164,7 +171,7 @@
   }
 
   @include media.for-desktop {
-    margin-top: 44px;
+    margin-top: 45px;
   }
 }
 

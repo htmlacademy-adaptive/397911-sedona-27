@@ -50,7 +50,6 @@
     display: block;
     background-size: contain;
 
-
     @include media.for-mobile {
       position: absolute;
       height: 38px;
@@ -66,9 +65,10 @@
     }
 
     @include media.for-desktop {
-      width: 80px;
-      height: 72px;
-      margin: 0 auto 14px;
+      width: 82px;
+      height: 74px;
+      margin: 0 auto 15px;
+      background-size: 100% 100%;
     }
   }
 
@@ -89,13 +89,14 @@
     @include media.for-tablet {
       width: 80px;
       height: 75px;
-      margin: 0 auto 14px;
+      margin: 0 auto 10px;
     }
 
     @include media.for-desktop {
       width: 73px;
       height: 69px;
       margin: 0 auto 14px;
+      background-size: 100% 100%;
     }
   }
 
@@ -114,15 +115,16 @@
     }
 
     @include media.for-tablet {
-      width: 67px;
+      width: 66px;
       height: 75px;
-      margin: 0 auto 14px;
-      transform: translate(5px, 10px);
+      margin: 0 auto 15px;
+      transform: translate(3px, 10px);
+      background-size: 100% 100%;
     }
 
     @include media.for-desktop {
       width: 78px;
-      height: 75px;
+      height: 76px;
       margin: 0 auto 14px;
       background-size: 100% 100%;
     }
@@ -144,7 +146,7 @@
     padding-bottom: 46px;
 
     & .info-tile__title {
-      margin-top: 11px;
+      margin-top: 9px;
     }
 
     & .info-tile__text {
@@ -153,7 +155,7 @@
   }
 
   @include media.for-desktop {
-    padding-top: 72px;
+    padding-top: 69px;
     padding-bottom: 54px;
 
     & .info-tile__title {
@@ -186,6 +188,15 @@
       text-align: left;
       margin-top: 8px;
     }
+  }
+
+  @include media.for-tablet {
+    line-height: 27px;
+  }
+
+  @include media.for-desktop {
+    font-size: 21px;
+    line-height: 27px;
   }
 }
 
