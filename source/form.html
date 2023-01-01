@@ -91,33 +91,47 @@
         <form class="feedback__form form" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="form__fieldset fieldset">
             <p class="fieldset__title">Представьтесь:</p>
-            <label class="fieldset__field field">
-              <span class="field__label field__label--top">Имя*</span>
-              <input class="field__input input" type="text" value="Пётр" placeholder="Имя" required>
-            </label>
-            <label class="fieldset__field field">
-              <span class="field__label field__label--top">Фамилия*</span>
-              <input class="field__input input" type="text" value="Пустота" placeholder="Фамилия" required>
-            </label>
-            <label class="fieldset__field field">
-              <span class="field__label field__label--top">Отчество</span>
-              <input class="field__input input" type="text" value="Викторович" placeholder="Отчество">
-            </label>
+            <ul class="fieldset__fields fieldset__fields--vertical">
+              <li class="fieldset__field">
+                <label class="field">
+                  <span class="field__label field__label--top">Имя*</span>
+                  <input class="field__input input" type="text" value="Пётр" placeholder="Имя" required>
+                </label>
+              </li>
+              <li class="fieldset__field">
+                <label class="field">
+                  <span class="field__label field__label--top">Фамилия*</span>
+                  <input class="field__input input" type="text" value="Пустота" placeholder="Фамилия" required>
+                </label>
+              </li>
+              <li class="fieldset__field">
+                <label class="field">
+                  <span class="field__label field__label--top">Отчество</span>
+                  <input class="field__input input" type="text" value="Викторович" placeholder="Отчество">
+                </label>
+              </li>
+            </ul>
           </fieldset>
           <fieldset class="form__fieldset fieldset">
             <p class="fieldset__title">Контактная информация:</p>
-            <label class="fieldset__field field">
-              <span class="field__label field__label--top">Контактный телефон*</span>
-              <input class="field__input input input--icon input--icon-tel" type="tel" placeholder="Введите телефон" required>
-            </label>
-            <label class="fieldset__field field">
-              <span class="field__label field__label--top">Электронная почта*</span>
-              <input class="field__input input input--icon input--icon-email" type="email" placeholder="Введите e-mail" required>
-            </label>
+            <ul class="fieldset__fields fieldset__fields--vertical">
+              <li class="fieldset__field">
+                <label class="field">
+                  <span class="field__label field__label--top">Контактный телефон*</span>
+                  <input class="field__input input input--icon input--icon-tel" type="tel" placeholder="Введите телефон" required>
+                </label>
+              </li>
+              <li class="fieldset__field">
+                <label class="field">
+                  <span class="field__label field__label--top">Электронная почта*</span>
+                  <input class="field__input input input--icon input--icon-email" type="email" placeholder="Введите e-mail" required>
+                </label>
+              </li>
+            </ul>
           </fieldset>
           <fieldset class="form__fieldset fieldset">
             <p class="fieldset__title fieldset__title--decorated">Ваше общее впечатление:</p>
-            <ul class="fieldset__fields">
+            <ul class="fieldset__fields fieldset__fields--horizontal fieldset__fields--radio">
               <li class="fieldset__field">
                 <div class="field">
                   <label class="field__label field__label--right">
@@ -132,7 +146,7 @@
                   <label class="field__label field__label--right">
                     <input class="field__input  visually-hidden" type="radio" name="emotional-experience" value="pessimistic">
                     <span class="radio"></span>
-                    Скорее отрицательно
+                    Скорее отрицательное
                   </label>
                 </div>
               </li>
@@ -149,7 +163,7 @@
           </fieldset>
           <fieldset class="form__fieldset fieldset">
             <p class="fieldset__title fieldset__title--decorated">Посещенные <br>достопримечательности: </p>
-            <ul class="fieldset__fields">
+            <ul class="fieldset__fields fieldset__fields--horizontal fieldset__fields--checkboxes">
               <li class="fieldset__field">
                 <div class="field">
                   <label class="field__label field__label--right">
@@ -190,12 +204,20 @@
           </fieldset>
           <fieldset class="form__fieldset fieldset">
             <p class="fieldset__title fieldset__title--decorated">Опишите свои эмоции:</p>
-            <textarea class="fieldset__field input input--multiline" name="comment" placeholder="Опишите подробно все свои восторги"></textarea>
+            <ul class="fieldset__fields fieldset__fields--vertical fieldset__fields--vertical-narrow">
+              <li class="fieldset__field">
+                <label class="field">
+                  <textarea class="fieldset__field input input--multiline" name="comment" placeholder="Опишите подробно все свои восторги" rows="5"></textarea>
+                </label>
+              </li>
+              <li class="fieldset__field">
+                <div class="button-send">
+                  <button class="form__submit button" type="submit">Отправить отзыв</button>
+                  <p class="form__note">* — обязательные поля</p>
+                </div>
+              </li>
+            </ul>
           </fieldset>
-          <div class="button-send">
-            <button class="form__submit button" type="submit">Отправить отзыв</button>
-            <p class="form__note">* - обязательные поля</p>
-          </div>
         </form>
       </main>
       <footer class="main-footer footer">

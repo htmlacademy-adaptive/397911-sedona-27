@@ -1,18 +1,30 @@
 @use "../variables.scss";
 @use "../mixins/media.scss";
 
-.cfeedback__idea {
+.feedback__idea {
   @include media.for-mobile {
-    padding: 0 7px;
+    padding: 37px 7px 28px;
   }
 
-
-  @media (min-width: variables.$tablet-width) {
-    padding: 0 60px;
+  @include media.for-tablet {
+    padding: 64px 60px 102px;
   }
 
-  @media (min-width: variables.$desktop-width) {
-    padding: 0 120px;
+  @include media.for-desktop {
+    padding: 113px 120px 68px;
+  }
+}
+
+.feedback__idea .info__description {
+  @include media.for-mobile {
+    margin-top: 23px;
+  }
+  @include media.for-tablet {
+    margin-top: 20px;
+    line-height: 24px;
+  }
+  @include media.for-desktop {
+    margin-top: 33px;
   }
 }
 
