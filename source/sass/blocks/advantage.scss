@@ -186,15 +186,18 @@
     margin-bottom: 16px;
   }
 }
+
 .advantage--type-4 .advantage__description {
   @include media.for-mobile {
     transform: translate(-2px, 1px);
     line-height: 22px;
     margin-bottom: -2px;
   }
+
   @include media.for-tablet {
-    transform: translate(-9px, 0px);
+    transform: translate(-9px, 0);
   }
+
   @include media.for-desktop {
     transform: translate(-1px, -1px);
   }
@@ -206,6 +209,7 @@
     margin-bottom: 16px;
   }
 }
+
 .advantage--type-5 .advantage__description {
   @include media.for-mobile {
     transform: translate(-2px, 1px);

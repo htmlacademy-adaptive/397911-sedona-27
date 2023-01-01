@@ -72,11 +72,13 @@
     padding-left: 21px;
   }
 }
+
 .photo-item:nth-child(1) .photo-item__title {
   @include media.for-desktop {
     transform: translate(0, 4px);
   }
 }
+
 .photo-item:nth-child(1) .photo-item__autor {
   @include media.for-desktop {
     transform: translate(0, 1px);

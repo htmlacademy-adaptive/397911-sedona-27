@@ -18,10 +18,12 @@
   @include media.for-mobile {
     margin-top: 23px;
   }
+
   @include media.for-tablet {
     margin-top: 20px;
     line-height: 24px;
   }
+
   @include media.for-desktop {
     margin-top: 33px;
   }
