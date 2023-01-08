@@ -12,7 +12,7 @@
 
   @include media.for-tablet {
     &--type-1 {
-      padding: 25px 33px 0 33px;
+      padding: 22px 33px 0 33px;
     }
   }
 
@@ -24,33 +24,33 @@
 
   @include media.for-mobile {
     &--type-2 {
-      padding: 38px 18px;
+      padding: 38px 18px 37px;
     }
   }
 
   @include media.for-tablet {
     &--type-2 {
-      padding: 22px 33px 0 33px;
+      padding: 21px 33px 0 33px;
       order: 2;
     }
   }
 
   @include media.for-desktop {
     &--type-2 {
-      padding: 53px 88px 51px 86px;
+      padding: 52px 88px 51px 86px;
       order: 2;
     }
   }
 
   @include media.for-mobile {
     &--type-3 {
-      padding: 24px 32px 26px 32px;
+      padding: 25px 32px 25px 32px;
     }
   }
 
   @include media.for-tablet {
     &--type-3 {
-      padding: 1px 31px 0 33px;
+      padding: 0 31px 0 33px;
     }
   }
 
@@ -68,7 +68,7 @@
 
   @include media.for-tablet {
     &--type-4 {
-      padding: 3px 40px 0 42px;
+      padding: 3px 40px 4px 42px;
     }
   }
 
@@ -86,7 +86,7 @@
 
   @include media.for-tablet {
     &--type-5 {
-      padding: 5px 30px 0 33px;
+      padding: 0 30px 0 33px;
     }
   }
 
@@ -102,7 +102,6 @@
     display: block;
     text-align: center;
 
-
     &--white {
       color: #ffffff;
     }
@@ -116,7 +115,7 @@
     }
 
     @include media.for-desktop {
-      margin: 11px 18px 24px 18px;
+      margin: 12px 18px 22px 18px;
     }
   }
 
@@ -128,6 +127,10 @@
 
     &--white {
       color: #ffffff;
+    }
+
+    @include media.for-desktop {
+      line-height: 22px;
     }
   }
 
@@ -168,5 +171,49 @@
     .advantage__description--black {
       width: 300px;
     }
+  }
+}
+
+.advantage--type-2 .advantage__description {
+  @include media.for-tablet {
+    transform: translate(-3px, 0);
+  }
+}
+
+.advantage--type-4 .advantage__numbers {
+  @include media.for-mobile {
+    transform: translate(0, 1px);
+    margin-bottom: 16px;
+  }
+}
+
+.advantage--type-4 .advantage__description {
+  @include media.for-mobile {
+    transform: translate(-2px, 1px);
+    line-height: 22px;
+    margin-bottom: -2px;
+  }
+
+  @include media.for-tablet {
+    transform: translate(-9px, 0);
+  }
+
+  @include media.for-desktop {
+    transform: translate(-1px, -1px);
+  }
+}
+
+.advantage--type-5 .advantage__numbers {
+  @include media.for-mobile {
+    transform: translate(0, 2px);
+    margin-bottom: 16px;
+  }
+}
+
+.advantage--type-5 .advantage__description {
+  @include media.for-mobile {
+    transform: translate(-2px, 1px);
+    line-height: 22px;
+    margin-bottom: -2px;
   }
 }

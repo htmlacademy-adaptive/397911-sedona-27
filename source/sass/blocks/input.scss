@@ -1,3 +1,4 @@
+@use "../mixins/media.scss";
 @use "../mixins/title.scss";
 
 .input {
@@ -34,14 +35,16 @@
   &--multiline {
     width: 100%;
     border: none;
-    height: 150px;
     background: #f2f2f2;
     resize: none;
 
-
     @include title.title();
     text-transform: none;
-    padding: 16px 0 16px 16px;
+    padding: 16px;
+
+    @include media.for-mobile {
+      padding-bottom: 3px;
+    }
   }
 
   &--icon {

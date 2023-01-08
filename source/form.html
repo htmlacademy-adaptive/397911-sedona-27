@@ -2,7 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/180.png">
@@ -13,7 +13,7 @@
   <body class="page__body">
     <div class="page__center">
       <header class="main-header main-header--js-disabled">
-        <a class="main-header__logo" href="#">
+        <a class="main-header__logo" href="index.html">
           <svg  width="185" height="96" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185 96">
             <path d="M185 0H0L79.8097 90.1011C86.8489 97.9663 98.2503 97.9663 105.289 90.1011L185 0Z" fill="#81B3D3"/>
             <path d="M42.8296 0.696915L92.0043 58.8395L140.882 1.09515L42.8296 0.696915Z" fill="#23A9E1"/>
@@ -50,7 +50,7 @@
         </a>
         <button class="main-header__toggle" type="button">
             <svg  width="23" height="22" aria-hidden="true" focusable="false" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="img/sprite.svg#hamburger">
+              <use xlink:href="img/sprite.svg#hamburger"></use>
             </svg>
 
           <span class="visually-hidden">Открыть меню</span>
@@ -58,7 +58,7 @@
         <nav class="main-header__nav main-nav">
           <button class="main-nav__close" type="button">
             <svg  width="23" height="22" aria-hidden="true" focusable="false" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="img/sprite.svg#nav-closed">
+              <use xlink:href="img/sprite.svg#nav-closed"></use>
             </svg>
             <span class="visually-hidden">Закрыть меню</span>
           </button>
@@ -71,7 +71,7 @@
               <a class="main-menu__link" href="catalog.html">Фото и видео</a>
             </li>
             <li class="main-menu__item">
-              <a class="main-menu__link main-menu__link--current" href="form.html">Форма отзыва</a>
+              <a class="main-menu__link main-menu__link--current" href="#">Форма отзыва</a>
             </li>
             <li class="main-menu__item">
               <a class="main-menu__link" href="https://www.htmlacademy.ru/">html academy</a>
@@ -91,33 +91,47 @@
         <form class="feedback__form form" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="form__fieldset fieldset">
             <p class="fieldset__title">Представьтесь:</p>
-            <label class="fieldset__field field">
-              <span class="field__label field__label--top">Имя*</span>
-              <input class="field__input input" type="text" value="Пётр" placeholder="Имя" required>
-            </label>
-            <label class="fieldset__field field">
-              <span class="field__label field__label--top">Фамилия*</span>
-              <input class="field__input input" type="text" value="Пустота" placeholder="Фамилия" required>
-            </label>
-            <label class="fieldset__field field">
-              <span class="field__label field__label--top">Отчество</span>
-              <input class="field__input input" type="text" value="Викторович" placeholder="Отчество">
-            </label>
+            <ul class="fieldset__fields fieldset__fields--vertical">
+              <li class="fieldset__field">
+                <label class="field">
+                  <span class="field__label field__label--top">Имя*</span>
+                  <input class="field__input input" type="text" value="Пётр" placeholder="Имя" required>
+                </label>
+              </li>
+              <li class="fieldset__field">
+                <label class="field">
+                  <span class="field__label field__label--top">Фамилия*</span>
+                  <input class="field__input input" type="text" value="Пустота" placeholder="Фамилия" required>
+                </label>
+              </li>
+              <li class="fieldset__field">
+                <label class="field">
+                  <span class="field__label field__label--top">Отчество</span>
+                  <input class="field__input input" type="text" value="Викторович" placeholder="Отчество">
+                </label>
+              </li>
+            </ul>
           </fieldset>
           <fieldset class="form__fieldset fieldset">
             <p class="fieldset__title">Контактная информация:</p>
-            <label class="fieldset__field field">
-              <span class="field__label field__label--top">Контактный телефон*</span>
-              <input class="field__input input input--icon input--icon-tel" type="tel" placeholder="Введите телефон" required>
-            </label>
-            <label class="fieldset__field field">
-              <span class="field__label field__label--top">Электронная почта*</span>
-              <input class="field__input input input--icon input--icon-email" type="email" placeholder="Введите e-mail" required>
-            </label>
+            <ul class="fieldset__fields fieldset__fields--vertical">
+              <li class="fieldset__field">
+                <label class="field">
+                  <span class="field__label field__label--top">Контактный телефон*</span>
+                  <input class="field__input input input--icon input--icon-tel" type="tel" placeholder="Введите телефон" required>
+                </label>
+              </li>
+              <li class="fieldset__field">
+                <label class="field">
+                  <span class="field__label field__label--top">Электронная почта*</span>
+                  <input class="field__input input input--icon input--icon-email" type="email" placeholder="Введите e-mail" required>
+                </label>
+              </li>
+            </ul>
           </fieldset>
           <fieldset class="form__fieldset fieldset">
             <p class="fieldset__title fieldset__title--decorated">Ваше общее впечатление:</p>
-            <ul class="fieldset__fields">
+            <ul class="fieldset__fields fieldset__fields--horizontal fieldset__fields--radio">
               <li class="fieldset__field">
                 <div class="field">
                   <label class="field__label field__label--right">
@@ -132,7 +146,7 @@
                   <label class="field__label field__label--right">
                     <input class="field__input  visually-hidden" type="radio" name="emotional-experience" value="pessimistic">
                     <span class="radio"></span>
-                    Скорее отрицательно
+                    Скорее отрицательное
                   </label>
                 </div>
               </li>
@@ -149,7 +163,7 @@
           </fieldset>
           <fieldset class="form__fieldset fieldset">
             <p class="fieldset__title fieldset__title--decorated">Посещенные <br>достопримечательности: </p>
-            <ul class="fieldset__fields">
+            <ul class="fieldset__fields fieldset__fields--horizontal fieldset__fields--checkboxes">
               <li class="fieldset__field">
                 <div class="field">
                   <label class="field__label field__label--right">
@@ -190,12 +204,20 @@
           </fieldset>
           <fieldset class="form__fieldset fieldset">
             <p class="fieldset__title fieldset__title--decorated">Опишите свои эмоции:</p>
-            <textarea class="fieldset__field input input--multiline" name="comment" placeholder="Опишите подробно все свои восторги"></textarea>
+            <ul class="fieldset__fields fieldset__fields--vertical fieldset__fields--vertical-narrow">
+              <li class="fieldset__field">
+                <label class="field">
+                  <textarea class="fieldset__field input input--multiline" name="comment" placeholder="Опишите подробно все свои восторги" rows="5"></textarea>
+                </label>
+              </li>
+              <li class="fieldset__field">
+                <div class="button-send">
+                  <button class="form__submit button" type="submit">Отправить отзыв</button>
+                  <p class="form__note">* — обязательные поля</p>
+                </div>
+              </li>
+            </ul>
           </fieldset>
-          <div class="button-send">
-            <button class="form__submit button" type="submit">Отправить отзыв</button>
-            <p class="form__note">* - обязательные поля</p>
-          </div>
         </form>
       </main>
       <footer class="main-footer footer">
@@ -205,7 +227,7 @@
             <a class="social-item__link" href="https://vk.com/htmlacademy">
               <span class="visually-hidden social-item__description">Вконтакте</span>
               <svg class="social-item__icon" width="24" height="24" aria-hidden="true" focusable="false" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="img/sprite.svg#vk">
+                <use xlink:href="img/sprite.svg#vk"></use>
               </svg>
             </a>
           </li>
@@ -213,7 +235,7 @@
             <a class="social-item__link" href="https://t.me/htmlacademy">
               <span class="visually-hidden social-list__description">Telegram</span>
               <svg class="social-item__icon" width="24" height="24" aria-hidden="true" focusable="false" fill="white" xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="img/sprite.svg#telegram">
+                <use xlink:href="img/sprite.svg#telegram"></use>
               </svg>
             </a>
           </li>
@@ -221,32 +243,38 @@
             <a class="social-item__link" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden social-item__description">YouTube</span>
               <svg class="social-item__icon" width="24" height="24" aria-hidden="true" focusable="false" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="img/sprite.svg#youtube">
+                <use xlink:href="img/sprite.svg#youtube"></use>
               </svg>
             </a>
           </li>
         </ul>
 
         <div class="footer__copyright copyright">
-          <a href="#" class="copyright__text"> Разработано <svg class="copyright__icon" width="27" height="35" aria-hidden="true" focusable="false" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="img/sprite.svg#htmlacademy">
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__text"> Разработано <svg class="copyright__icon" width="27" height="35" aria-hidden="true" focusable="false" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/sprite.svg#htmlacademy"></use>
             </svg>
           </a>
         </div>
       </footer>
     </div>
-    <div class="backdrop">
-      <div class="backdrop__content modal">
-        <h3 class="modal__title">Что-то пошло не так!</h3>
-        <p class="modal__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-        <button class="modal__button button button--small" type="button">Ок</button>
+    <div class="backdrop modal__hidden">
+      <div class="backdrop__content modal modal--narrow">
+        <header class="modal__header">
+          <h3 class="modal__title">Что-то пошло не так!</h3>
+          <p class="modal__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+          <button class="modal__button button button--small" type="button">Ок</button>
+        </header>
       </div>
     </div>
-    <div class="backdrop">
-      <div class="backdrop__content modal">
-        <h3 class="modal__title">Ваш отзыв отправлен</h3>
-        <p class="modal__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте. </p>
-        <button class="modal__button button button--small" type="button">Закрыть окно</button>
+    <div class="backdrop modal__hidden">
+      <div class="backdrop__content modal modal--wide">
+        <header class="modal__header">
+          <h3 class="modal__title">Ваш отзыв отправлен!</h3>
+          <p class="modal__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте. </p>
+        </header>
+        <footer class="modal__footer">
+          <button class="modal__button button button--small" type="button">Закрыть окно</button>
+        </footer>
       </div>
     </div>
     <script src="js/script.js"></script>

@@ -1,4 +1,5 @@
 @use "../mixins/text.scss";
+@use "../mixins/media.scss";
 
 .copyright__text {
   @include text.text();
@@ -27,4 +28,10 @@
 
 .copyright__text svg {
   margin-left: 12px;
+}
+
+@include media.for-tablet-and-desktop {
+  .copyright__text--custom-index-padding {
+    transform: translate(-16px, 0);
+  }
 }

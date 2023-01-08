@@ -1,69 +1,64 @@
-@use "../variables.scss";
-@use "../mixins/media.scss";
-@use "../mixins/text.scss";
+@use "../mixins/media";
+@use "../mixins/text";
 
 .form {
-  @media (min-width: variables.$tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
+  display: grid;
 
-    &:nth-child(1),
-    &:nth-child(2) {
-      width: 50%;
-    }
-
-    &:nth-child(n+2) {
-      width: 100%;
-    }
+  @include media.for-tablet {
+    grid-template-columns: 50% 50%;
+    grid-row-gap: 48px;
   }
-}
 
-
-.form__submit {
-  border: none;
-  width: 280px;
+  @include media.for-desktop {
+    grid-template-columns: 51.5% 48.5%;
+    grid-row-gap: 56px;
+  }
 }
 
 .form__fieldset {
-  border: none;
+  display: flex;
+}
 
-  @include media.for-mobile {
-    border-top: 1px solid #e5e5e5;
+@include media.for-tablet-and-desktop {
+  .form__fieldset:nth-child(1) {
+    border-right: 1px solid #dbdbdb;
   }
 
-  @media (min-width: variables.$tablet-width) {
-    &:nth-child(1),
-    &:nth-child(2) {
-      width: 50%;
-      box-sizing: border-box;
-      align-items: stretch;
-    }
+  .form__fieldset:nth-child(3) .fieldset__title {
+    margin-bottom: 4px;
+  }
+}
 
-    &:nth-child(1) {
-      border-right: 1px solid #dbdbdb;
-      padding-right: 43px;
-    }
+.form__fieldset:nth-child(n+3) {
+  @include media.for-tablet-and-desktop {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
 
-    &:nth-child(2) {
-      padding-left: 44px;
-    }
-
-    &:nth-child(n+3) {
-      width: 100%;
-    }
+.form__fieldset:nth-child(5) {
+  @include media.for-tablet {
+    margin-top: -6px;
   }
 }
 
 .form__note {
   @include text.text();
-  font-size: 12px;
-  margin: 3px 0 0 0;
+
+  margin: 0;
 
   @include media.for-mobile {
-    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 12px;
+    padding-top: 2px;
   }
 
-  @include media.for-tablet {
-    margin-right: 0;
+  @include media.for-tablet-and-desktop {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 8px;
+    padding-left: 20px;
   }
 }

@@ -5,12 +5,4 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 6px;
-
-  @include media.for-tablet {
-    padding-left: 11px;
-  }
-
-  @include media.for-desktop {
-    padding-left: 11px;
-  }
 }

@@ -15,32 +15,39 @@
     justify-content: space-between;
     flex-direction: row;
     padding-left: 61px;
-    padding-right: 75px;
-    padding-top: 22px;
+    padding-right: 60px;
+    padding-top: 36px;
+    padding-bottom: 36px;
   }
 
   @include media.for-desktop {
     justify-content: space-between;
     flex-direction: row;
     padding-left: 119px;
-    padding-right: 136px;
-    padding-top: 22px;
+    padding-right: 120px;
+    padding-top: 36px;
+    padding-bottom: 36px;
   }
 }
 
 .footer__hashtag {
   @include heading.heading();
-  margin-top: 29px;
+  margin: 0;
   padding: 0;
+
+  @include media.for-mobile {
+    margin-bottom: 31px;
+  }
 }
 
 .footer__social-links {
   @include media.for-mobile {
-    margin-top: 12px;
     margin-bottom: 40px;
+    margin-top: 0;
   }
 
   @include media.for-tablet-and-desktop {
     margin: 0;
+    margin-left: -7px;
   }
 }

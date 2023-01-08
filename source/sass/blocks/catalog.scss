@@ -14,7 +14,7 @@
   }
 
   @include media.for-desktop {
-    padding: 100px 0 65px 0;
+    padding: 98px 0 88px 0;
     width: 445px;
     margin: 0 auto;
   }
@@ -39,7 +39,11 @@
 
   @include media.for-tablet {
     padding: 0 60px;
-    margin-bottom: 40px;
+    margin-bottom: 37px;
+  }
+
+  @include media.for-desktop {
+    padding-bottom: 80px;
   }
 }
 
@@ -52,7 +56,20 @@
 
   @include media.for-desktop {
     width: 445px;
-    padding: 61px 0 73px;
+    padding: 27px 0 87px;
     margin: 0 auto;
+  }
+}
+
+.catalog__persuasions-header .info__description {
+  @include media.for-desktop {
+    margin-top: 31px;
+  }
+}
+
+.catalog__idea .info__description {
+  @include media.for-desktop {
+    margin-top: 31px;
+    line-height: 22px;
   }
 }

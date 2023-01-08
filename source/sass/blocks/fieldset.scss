@@ -1,37 +1,55 @@
-@use "../mixins/title.scss";
-@use "../mixins/media.scss";
-@use "../variables.scss";
+@use "../mixins/title";
+@use "../mixins/media";
 
 .fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border: none;
+  padding: 0;
   margin: 0;
-  box-sizing: border-box;
 
   @include media.for-mobile {
-    padding: 20px 20px 24px 20px;
-  }
-
-  @include media.for-tablet {
-    padding: 20px 0 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    border-top: 1px solid #e5e5e5;
   }
 }
 
 .fieldset__title {
-  @include title.title();
+  display: block;
+  width: 100%;
   text-align: center;
-  margin: 0 0 20px;
+  margin: 0;
 
-  @include media.for-tablet-and-desktop {
-    @include title.title-medium();
-    width: 100%;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+
+  @include media.for-mobile {
+    font-size: 18px;
+    line-height: 26px;
+    padding-top: 24px;
+  }
+
+  @include media.for-tablet {
+    font-size: 21px;
+    line-height: 26px;
+    padding-top: 1px;
+  }
+
+  @include media.for-desktop {
+    font-size: 21px;
+    line-height: 26px;
+    padding-top: 1px;
   }
 }
 
 .fieldset__title--decorated {
   @include media.for-tablet-and-desktop {
     position: relative;
+    padding: 0 calc((100% - 400px) / 2);
+    box-sizing: border-box;
 
     &::after,
     &::before {
@@ -56,31 +74,127 @@
 }
 
 .fieldset__fields {
-  list-style: none;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
   padding: 0;
+  margin: 0;
+  list-style: none;
 
+  @include media.for-mobile {
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+  }
 
+  @include media.for-tablet {
+    margin-top: 27px;
+  }
+
+  @include media.for-desktop {
+    margin-top: 27px;
+  }
+}
+
+.fieldset:nth-child(1) .fieldset__fields {
+  @include media.for-tablet {
+    padding-right: 44px;
+  }
+
+  @include media.for-desktop {
+    padding-right: 64px;
+  }
+}
+
+.fieldset:nth-child(2) .fieldset__fields {
+  @include media.for-mobile {
+    padding-bottom: 34px;
+  }
+
+  @include media.for-tablet {
+    padding-left: 44px;
+  }
+
+  @include media.for-desktop {
+    padding-left: 64px;
+  }
+}
+
+.fieldset:nth-child(3) .fieldset__fields {
+  @include media.for-mobile {
+    padding-bottom: 24px;
+  }
+}
+
+.fieldset:nth-child(4) .fieldset__fields {
+  @include media.for-mobile {
+    padding-bottom: 24px;
+  }
+}
+
+.fieldset__fields--horizontal {
   @include media.for-tablet {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    min-width: 480px;
+    grid-row-gap: 16px;
+    grid-column-gap: 32px;
   }
 
-  @media (min-width: variables.$desktop-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 64px;
+  @include media.for-desktop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-left: 17px;
+    padding-right: 17px;
   }
 }
 
-.fieldset__field {
-  flex-direction: column;
+.fieldset__fields--radio {
+  @include media.for-tablet {
+    width: 576px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include media.for-desktop {
+    padding-top: 17px;
+    padding-bottom: 17px;
+  }
 }
 
-@include media.for-mobile {
-  .fieldset__field + .fieldset__field {
+.fieldset__fields--checkboxes {
+  @include media.for-tablet {
+    width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include media.for-desktop {
+    padding-top: 31px;
+    padding-bottom: 31px;
+  }
+}
+
+.fieldset__fields--vertical {
+  @include media.for-tablet-and-desktop {
+    padding-bottom: 15px;
+  }
+}
+
+.fieldset__fields--vertical-narrow {
+  @include media.for-desktop {
+    padding-left: 96px;
+    padding-right: 96px;
+  }
+}
+
+.fieldset__fields--horizontal .fieldset__field + .fieldset__field {
+  @include media.for-mobile {
     margin-top: 16px;
   }
+}
+
+.fieldset__fields--vertical .fieldset__field + .fieldset__field {
+  margin-top: 16px;
 }
