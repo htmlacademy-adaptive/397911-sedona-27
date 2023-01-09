@@ -136,8 +136,6 @@
   @include media.for-tablet {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-row-gap: 16px;
-    grid-column-gap: 32px;
   }
 
   @include media.for-desktop {
@@ -145,8 +143,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding-left: 17px;
-    padding-right: 17px;
+    // padding-left: 17px;
+    // padding-right: 17px;
   }
 }
 
@@ -155,11 +153,15 @@
     width: 576px;
     margin-left: auto;
     margin-right: auto;
+    grid-row-gap: 16px;
+    grid-column-gap: 16px;
   }
 
   @include media.for-desktop {
     padding-top: 17px;
     padding-bottom: 17px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -168,11 +170,15 @@
     width: 480px;
     margin-left: auto;
     margin-right: auto;
+    grid-row-gap: 16px;
+    grid-column-gap: 32px;
   }
 
   @include media.for-desktop {
-    padding-top: 31px;
-    padding-bottom: 31px;
+    padding-top: 33px;
+    padding-bottom: 33px;
+    padding-left: 13px;
+    padding-right: 13px;
   }
 }
 

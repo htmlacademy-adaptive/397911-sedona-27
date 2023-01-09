@@ -3,6 +3,12 @@
 @use "../mixins/media.scss";
 
 .modal {
+  &--hidden {
+    display: none;
+  }
+}
+
+.modal__window {
   background-color: #ffffff;
 
   @include media.for-mobile {
@@ -123,6 +129,3 @@
   }
 }
 
-.modal__hidden {
-  display: none;
-}
