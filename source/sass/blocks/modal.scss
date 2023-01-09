@@ -3,6 +3,12 @@
 @use "../mixins/media.scss";
 
 .modal {
+  &--hidden {
+    display: none;
+  }
+}
+
+.modal__window {
   background-color: #ffffff;
 
   @include media.for-mobile {
@@ -121,8 +127,4 @@
   @include media.for-tablet-and-desktop {
     margin-top: 45px;
   }
-}
-
-.modal__hidden {
-  display: none;
 }
